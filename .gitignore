@@ -1,0 +1,7 @@
+.DS_Store
+.playwright-mcp/
+
+# Contains phone number / personal email — keep out of a public repo.
+# Remove these two lines if this repo is private and you want them tracked.
+Sohum Pohane Resume.docx
+resume_profile.md
