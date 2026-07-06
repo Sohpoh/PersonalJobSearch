@@ -43,5 +43,30 @@
     "title": "Software Engineer, Codex Core Agents",
     "company": "OpenAI",
     "first_seen": "2026-07-02"
+  },
+  "https://openai.com/careers/ai-systems-engineer-codex-agents-san-francisco/": {
+    "title": "AI Systems Engineer, Codex Agents",
+    "company": "OpenAI",
+    "first_seen": "2026-07-06"
+  },
+  "https://openai.com/careers/backend-software-engineer-applied-foundations-san-francisco/": {
+    "title": "Backend Software Engineer, Applied Foundations",
+    "company": "OpenAI",
+    "first_seen": "2026-07-06"
+  },
+  "https://openai.com/careers/full-stack-software-engineer-agent-enablement-san-francisco/": {
+    "title": "Full Stack Software Engineer, Agent Enablement",
+    "company": "OpenAI",
+    "first_seen": "2026-07-06"
+  },
+  "https://openai.com/careers/machine-learning-engineer-integrity-san-francisco/": {
+    "title": "Machine Learning Engineer, Integrity",
+    "company": "OpenAI",
+    "first_seen": "2026-07-06"
+  },
+  "https://openai.com/careers/data-engineer-san-francisco/": {
+    "title": "Data Engineer",
+    "company": "OpenAI",
+    "first_seen": "2026-07-06"
   }
 }
