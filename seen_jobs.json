@@ -68,5 +68,35 @@
     "title": "Data Engineer",
     "company": "OpenAI",
     "first_seen": "2026-07-06"
+  },
+  "https://openai.com/careers/full-stack-software-engineer-applied-foundations-san-francisco/": {
+    "title": "Full Stack Software Engineer, Applied Foundations",
+    "company": "OpenAI",
+    "first_seen": "2026-07-08"
+  },
+  "https://openai.com/careers/research-engineer-applied-ai-engineering-san-francisco/": {
+    "title": "Research Engineer, Applied AI Engineering",
+    "company": "OpenAI",
+    "first_seen": "2026-07-08"
+  },
+  "https://openai.com/careers/engineering-manager-mle-san-francisco/": {
+    "title": "Engineering Manager, MLE",
+    "company": "OpenAI",
+    "first_seen": "2026-07-08"
+  },
+  "https://openai.com/careers/ios-engineer-applied-foundations-san-francisco/": {
+    "title": "iOS Engineer, Applied Foundations",
+    "company": "OpenAI",
+    "first_seen": "2026-07-08"
+  },
+  "https://openai.com/careers/android-engineer-applied-foundations-san-francisco/": {
+    "title": "Android Engineer, Applied Foundations",
+    "company": "OpenAI",
+    "first_seen": "2026-07-08"
+  },
+  "https://openai.com/careers/principal-software-engineer-b2b-engineering-remote-us/": {
+    "title": "Principal Software Engineer, B2B Engineering",
+    "company": "OpenAI",
+    "first_seen": "2026-07-08"
   }
 }
