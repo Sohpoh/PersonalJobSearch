@@ -70,7 +70,7 @@ automatically junior.
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
-matching job (90+ for a 5-team filter) in one flat list in the DOM — no
+matching job (87-90+ for a 5-team filter as of 2026-07-08) in one flat list in the DOM — no
 pagination or load-more needed, no filter interaction needed either since the
 team IDs are baked into the URL. Sort order is alphabetical by job title, NOT
 by recency, and there is no visible sort control to change it. No posted-date
@@ -83,3 +83,14 @@ Good Fit If You" bullet lists) — fit is decided by matching those bullets
 against the resume's actual skills, not by a years cutoff. Individual job
 pages live at `openai.com/careers/<slug>/`, where `<slug>` is embedded in the
 search-page card's link href.
+
+**Search Notes (2026-07-08)**: Extracted 87 jobs via JS from the search page.
+All jobs are in Applied AI Engineering and Codex - Engineering teams. Many
+roles are specialized (iOS/Android engineers, frontend engineers, growth
+marketing) with limited overlap to the resume unless willing to pivot into
+mobile development. Strong matches: Backend Software Engineer (Applied
+Foundations), Full Stack Software Engineer (Applied Foundations & Agent
+Enablement), Research Engineer (Applied AI), Machine Learning Engineer
+(Integrity), Data Engineer. Engineering Manager and Principal roles exist but
+stretch for current career level. Page structure stable; approach of extracting
+all hrefs via JS query selector 'a[href*="/careers/"]' works well.
