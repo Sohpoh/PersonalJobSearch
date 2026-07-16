@@ -34,11 +34,23 @@ to `start=20` can show a different/overlapping set than actually clicking
 "Next jobs" from `start=10`. Prefer clicking the "Next jobs" button
 (or driving it via JS `click()` on the button, to dodge the cookie dialog)
 over constructing `start=` URLs directly when paging through for recency.
+The job-list buttons render text only in the accessibility tree, not in
+`textContent`/`innerText` via `browser_evaluate` (the DOM nodes appear to be
+populated through some non-standard mechanism) — read titles/locations from
+the `browser_snapshot`/`browser_wait_for` output instead of trying to
+`querySelectorAll` and scrape button text via JS.
+**2026-07-15 check**: Sampled the 40 most recent postings (4 pages). All were
+Senior/Director/Principal/Distinguished-level or based outside the US/UK
+(Israel, India, China, Korea, Vietnam) — zero fits in that sample. With
+~1091 total roles and 110 pages, a full sweep isn't practical each run;
+sampling the first 3-5 "Latest"-sorted pages seems to be a reasonable
+weekly check unless a faster way to filter by seniority is found.
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
-(`teams[n]=`, `roles[n]=`, `sort_by_new=true`). Results paginate 10 at a time
-via a "Show more" button / "Page X of Y" counter. Each card links to
+(`teams[n]=`, `roles[n]=`, `sort_by_new=true`). Pagination is via a `&page=N`
+query param appended directly to the URL (confirmed working 2026-07-15) —
+faster than clicking the "Page X of Y" counter each time. Each card links to
 `/profile/job_details/<id>`, which redirects to the canonical
 `/profile/job_details/<id>/` detail page — read that page's "Minimum
 Qualifications" heading, not the title: titles here are frequently generic
@@ -46,6 +58,20 @@ Qualifications" heading, not the title: titles here are frequently generic
 Standalone Apps Team") but the postings under "Standalone Apps Team" in
 particular have consistently required 12+ years of experience regardless of
 title. No posted-date shown on cards or detail pages.
+
+**2026-07-15 update**: The years-requirement pattern is broader than just
+Standalone Apps Team — nearly every generic "Software Engineer, X" posting
+(Infrastructure, Machine Learning, etc.) uses an "8+ years of programming
+experience OR 4+ years with a PhD" boilerplate minimum, well above an
+early-career resume. Research Scientist/Applied Scientist-flavored titles
+also consistently want a PhD or equivalent. Two title families buck this
+trend and are worth specifically checking each run: "Business Support
+Engineer" (3+ years SWE/SRE, seen in Menlo Park, CA — API troubleshooting +
+hands-on LLM experience, but on-call/support-flavored, not product eng) and
+"Business Engineer, Business Agents" (no stated years minimum, wants
+LLM/agentic-AI + Python/Java/PHP, reads like an FDE role) — but as of
+2026-07-15 every "Business Engineer, Business Agents" req was based in São
+Paulo, Brazil only.
 
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
@@ -94,3 +120,22 @@ Enablement), Research Engineer (Applied AI), Machine Learning Engineer
 (Integrity), Data Engineer. Engineering Manager and Principal roles exist but
 stretch for current career level. Page structure stable; approach of extracting
 all hrefs via JS query selector 'a[href*="/careers/"]' works well.
+
+**2026-07-15 update**: Total listing count under the same 5-team filter
+shifted 87 → 80 without any date signal to explain why (postings likely
+closed/opened) — since there's no way to tell "genuinely new" from "just not
+previously logged," this run re-judged every link not already in
+`seen_jobs.json` on its own merits rather than assuming the whole diff was
+new. Confirmed the qualitative/no-years-cutoff pattern holds across the
+Codex team specifically: "Codex Enterprise" (SF + London), "Codex — User
+Activation", "Codex Cyber", and "Full Stack Software Engineer, Codex" all
+matched well (Python/TypeScript/Go, agent-platform or dev-tooling work, no
+hard years bar) and are worth rechecking each run. Ruled out this run:
+"Cloud Infrastructure" and "GPU Infrastructure" postings (5+ years), "Infra
+Reliability" and "Integrity Foundations" (London) postings (4-5+ years,
+SRE/trust-safety functions, not a fit), "Computer Use & Frontier Interfaces"
+(wants Apple/Windows/desktop app experience), and "Web Layer" (wants strong
+C++/Chromium/Electron experience) — none of these match the resume's
+backend/agent-tooling skill set. Given ~50 Applied-AI-Engineering postings
+remain unopened each run, a future pass could work through the rest
+(ads/monetization/infra-flavored SWE roles) if more thoroughness is wanted.
