@@ -203,5 +203,45 @@
     "title": "Full Stack Software Engineer, Codex",
     "company": "OpenAI",
     "first_seen": "2026-07-15"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5343697008": {
+    "title": "Applied AI Engineer, Beneficial Deployments",
+    "company": "Anthropic",
+    "first_seen": "2026-07-20"
+  },
+  "https://www.metacareers.com/profile/job_details/1364522142281307/": {
+    "title": "Business Support Engineer",
+    "company": "Meta",
+    "first_seen": "2026-07-20"
+  },
+  "https://www.metacareers.com/profile/job_details/1564791422017150/": {
+    "title": "Business Engineer",
+    "company": "Meta",
+    "first_seen": "2026-07-20"
+  },
+  "https://www.metacareers.com/profile/job_details/1445438187630465/": {
+    "title": "Business Engineer, Business Agents",
+    "company": "Meta",
+    "first_seen": "2026-07-20"
+  },
+  "https://www.metacareers.com/profile/job_details/1746908453165086/": {
+    "title": "Business Support Engineer",
+    "company": "Meta",
+    "first_seen": "2026-07-20"
+  },
+  "https://www.metacareers.com/profile/job_details/935985748859498/": {
+    "title": "Research Engineer - MSL FAIR Foundations",
+    "company": "Meta",
+    "first_seen": "2026-07-20"
+  },
+  "https://openai.com/careers/full-stack-software-engineer-codex-cloud-apps-san-francisco/": {
+    "title": "Full Stack Software Engineer, Codex Cloud Apps",
+    "company": "OpenAI",
+    "first_seen": "2026-07-20"
+  },
+  "https://openai.com/careers/software-engineer-codex-enterprise-controls-san-francisco/": {
+    "title": "Software Engineer, Codex - Enterprise Controls",
+    "company": "OpenAI",
+    "first_seen": "2026-07-20"
   }
 }
