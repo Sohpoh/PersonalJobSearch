@@ -8,9 +8,33 @@ dates show up, quirks). Filled in automatically — no need to edit by hand.
 Greenhouse-hosted board (`job-boards.greenhouse.io/anthropic`). The
 `?departments[]=<id>` query param is a real, working filter — all matching
 roles render in the DOM at once (no pagination/load-more needed). No
-posted-date is shown anywhere on this board, so recency can't be verified;
-treat matches as date-unknown. Direct posting links are also on
+posted-date is shown anywhere on this board (a "New" badge appears next to
+some titles but with no date attached, so it's a rough recency signal at
+best); direct posting links are also on
 `job-boards.greenhouse.io/anthropic/jobs/<id>`.
+
+**2026-07-20 correction**: The "Applied AI" department under this filter is
+almost entirely a pre-sales/customer-success org, not engineering, despite
+titles that sound like engineering roles. Verified by opening several
+postings' actual qualifications text (not just titles): "Applied AI
+Architect" (all flavors — Commercial, Enterprise Tech, Industries,
+Government Technology, State and Local Government, Digital Natives),
+"Applied AI Security Architect", "Solutions Architect"/"Partner Solutions
+Architect", "Applied AI Technical Evangelist", and "Manager/Head of Applied
+AI Architecture" all explicitly require 5-7+ years in customer-facing
+pre-sales roles (Solutions Architect/Sales Engineer/Technical Account
+Manager), confirmed via screening questions like "Do you have 7+ years of
+experience in a pre-sales technical role". These are a different job
+function from the resume (engineering, not sales-engineering) and should be
+excluded regardless of how technical the title sounds — prior runs
+(2026-07-13) surfaced several of these as matches based on title alone
+without opening the JD; that was a mistake and shouldn't be repeated.
+The one title family that IS a genuine engineering/builder role: "Applied AI
+Engineer, Beneficial Deployments" — reads like a Forward Deployed
+Engineer/technical-founder role (4+ years, production LLM app experience),
+worth surfacing despite the years gap vs. an early-career resume. Check for
+new postings under this specific title each run rather than the broader
+"Applied AI Architect" family.
 
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
@@ -46,6 +70,17 @@ Senior/Director/Principal/Distinguished-level or based outside the US/UK
 sampling the first 3-5 "Latest"-sorted pages seems to be a reasonable
 weekly check unless a faster way to filter by seniority is found.
 
+**2026-07-20 check**: Sampled 3 pages (30 postings, ~1119 total roles now).
+Same pattern held — Senior/Distinguished/Director titles or non-US/UK
+locations dominate. One exception worth noting for future runs: postings
+tagged "New College Grad 2026" do occasionally appear (e.g. "Deep Learning
+Software Engineer, TensorRT Performance") and explicitly want only ~2 years
+experience, which matches the resume's level — but that specific one required
+strong C++/CUDA/GPU-inference skills with no real overlap to the resume's
+Python/agentic-AI/backend background, so it was ruled out on skill mismatch,
+not seniority. Worth specifically scanning for "New College Grad" or "New
+Grad" tagged titles each run as a way to skip past the senior-skewed bulk.
+
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
 (`teams[n]=`, `roles[n]=`, `sort_by_new=true`). Pagination is via a `&page=N`
@@ -73,6 +108,24 @@ LLM/agentic-AI + Python/Java/PHP, reads like an FDE role) — but as of
 2026-07-15 every "Business Engineer, Business Agents" req was based in São
 Paulo, Brazil only.
 
+**2026-07-20 update**: These job IDs churn week over week with no date
+signal to explain why — treat "not yet in seen_jobs.json" as the operative
+recency signal, same approach as OpenAI. The "Business Support
+Engineer"/"Business Engineer"/"Business Engineer, Business Agents" family
+turns out to have a wide qualifications spread by individual req, not a
+fixed years bar tied to the title: some postings ask 3+ years (good fit),
+others 5+ or 8+. The 8+ year ones read as lead-level despite the identical
+title (e.g. "Co-Lead the team's AI-native technical strategy", "Set
+technical communication standards representing the team internally and
+externally") — treat those as a more senior variant, not a fit. Always open
+each individual posting's Minimum Qualifications rather than assuming the
+bar from a previously-seen posting with the same title. Also worth
+checking each run: plain "Business Engineer" (no "Business Agents" suffix)
+has appeared with only a 3+ years bar in London, UK — and "Research Engineer
+- MSL FAIR Foundations" recurs under new job IDs and (unlike most other
+FAIR/Research Scientist titles here) has had postings with just a 3+ years
+bar and no PhD requirement — don't rule either out by title alone.
+
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
 is a marketing landing page, not a search page — the query params don't do
@@ -93,6 +146,20 @@ a boilerplate "3+ years professional software development experience, 2+
 years design/architecture experience" bar regardless of the level implied by
 the title, so a plain "Software Development Engineer" title is not
 automatically junior.
+
+**2026-07-20 update**: That boilerplate is specific to plain "Software
+Development Engineer" titles. "Sr. Software Development Engineer"/"Sr.
+Software Engineer" postings consistently use a different, more senior
+boilerplate instead: "5+ years of leading design or architecture ... +
+Experience as a mentor, tech lead or leading an engineering team" — a real
+step up, not just a title bump, and worth excluding rather than
+generously including. "Applied Scientist" postings consistently require
+"PhD, or Master's degree and 4+ years" — an in-progress Master's doesn't
+clear this bar on its own. "Solutions Architect"/"Specialist Solutions
+Architect" (GTM/pre-sales flavored, distinct from plain SDE roles) carry an
+8-10+ year bar, same pattern as Anthropic's Applied AI Architect family —
+exclude on sight. This run's 10 most-recent AI-filtered postings were
+entirely made up of these senior/PhD/pre-sales/manager patterns — zero fits.
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
@@ -139,3 +206,27 @@ C++/Chromium/Electron experience) — none of these match the resume's
 backend/agent-tooling skill set. Given ~50 Applied-AI-Engineering postings
 remain unopened each run, a future pass could work through the rest
 (ads/monetization/infra-flavored SWE roles) if more thoroughness is wanted.
+
+**2026-07-20 update**: Did that fuller pass (~50 previously-unopened postings,
+opened ~15 individually). Findings: the "no hard years cutoff" pattern from
+Codex/Applied Foundations does NOT generalize to the rest of the board —
+most non-Codex postings do state explicit years, just embedded in
+prose rather than a "Basic Qualifications" list, so they're easy to miss by
+skimming titles alone. Confirmed years bars found: "Founding" titles (6+
+years), "Performance Engineer" (7+ years + OS-internals depth), "Ads
+Manager"/monetization SWE (7+ years), "Analytics Engineer" (5+ years, and a
+data/SQL function not software engineering), "Health AI" full-stack (5+
+years). "Protection Scientist Engineer, Integrity" (appears in multiple
+cities incl. London) is trust-and-safety investigations work, not software
+engineering, despite the "Engineer" title — 4+ years but wrong function.
+"Model Designer" is a UX/product-taste role with no coding requirement,
+not an engineering role despite being listed under Applied AI. New matches
+that DID clear the bar: "Full Stack Software Engineer, Codex Cloud Apps" and
+"Software Engineer, Codex - Enterprise Controls" — both in the Codex team,
+no stated years minimum, backend/full-stack skill overlap. Net takeaway:
+keep prioritizing the Codex team specifically (consistently no years bar,
+consistently good skill overlap) over the broader Applied-AI-Engineering
+list, where most individual reqs (ads, infra, safety, analytics, legal,
+performance) turn out to carry a senior bar once actually opened — title
+alone under-predicts this for OpenAI more than for the other companies
+tracked.
