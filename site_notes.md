@@ -108,6 +108,16 @@ LLM/agentic-AI + Python/Java/PHP, reads like an FDE role) — but as of
 2026-07-15 every "Business Engineer, Business Agents" req was based in São
 Paulo, Brazil only.
 
+**2026-07-24 update**: The "8+ years/PhD" boilerplate is not universal even
+among generic "Software Engineer, X" titles — "Software Engineer, Machine
+Learning" (London, UK, job ID 1048049836887307) had only a Bachelor's-degree
+minimum with no explicit years number, plus NLP/information-retrieval
+preferred quals. Don't assume the boilerplate applies without opening the
+posting, even for a title pattern seen before. Also confirmed plain
+"Business Engineer" continues to appear with just a 3+ years bar and direct
+PHP/Python/Java/JS overlap (this time in New York, NY, not just London) —
+worth checking every run regardless of city.
+
 **2026-07-20 update**: These job IDs churn week over week with no date
 signal to explain why — treat "not yet in seen_jobs.json" as the operative
 recency signal, same approach as OpenAI. The "Business Support
@@ -146,6 +156,18 @@ a boilerplate "3+ years professional software development experience, 2+
 years design/architecture experience" bar regardless of the level implied by
 the title, so a plain "Software Development Engineer" title is not
 automatically junior.
+
+**2026-07-24 update**: The "Kiro" and "Bedrock AgentCore" agentic-AI product
+lines are worth checking specifically each run — plain "Software Development
+Engineer, Amazon Bedrock AgentCore" (Bellevue, WA, job 10467661) used the
+standard 3+ years SDE boilerplate (not the senior variant) and is a strong
+direct match for agent-runtime/production-LLM work. A "Frontend Engineer,
+Kiro" posting (job 10480789, 2+ years) also appeared but was excluded — it's
+a genuine frontend role requiring JS framework (React/Angular) experience the
+resume doesn't demonstrate, illustrating that a low years bar alone doesn't
+override a mismatched role function. Sampled 5 "most-recent"-sorted pages
+this run (up from prior runs' 1 page of 10) since Kiro/AgentCore/Bedrock
+postings didn't all surface on page 1 — worth continuing at this depth.
 
 **2026-07-20 update**: That boilerplate is specific to plain "Software
 Development Engineer" titles. "Sr. Software Development Engineer"/"Sr.
@@ -230,3 +252,29 @@ list, where most individual reqs (ads, infra, safety, analytics, legal,
 performance) turn out to carry a senior bar once actually opened — title
 alone under-predicts this for OpenAI more than for the other companies
 tracked.
+
+**2026-07-24 update**: Confirmed the total-listing-count churn continues (95
+raw links this run under the same filter, ~76 not yet in seen_jobs.json —
+most of that diff is postings previously opened-and-rejected in prior runs
+rather than genuinely new, since rejected postings never get logged; re-check
+`site_notes.md`'s per-title callouts below before reopening a familiar title
+family). New Codex team postings found and matched: "Full Stack Software
+Engineer, Cybersecurity Products" (no years bar, backend/API/orchestration
+for AI security tooling — good fit) and "Software Engineer, Cyber Frontier"
+(no years bar, Python/TypeScript + ML systems, but heavily
+cyber-threat-research-specialized — bigger stretch than other Codex matches,
+worth a second look each run rather than an automatic include). Outside
+Codex, "Software Engineer, ChatGPT Shopping" (Applied AI Engineering) had no
+numeric years numeral, only a soft "significant experience" bar, and reads as
+a genuine full-stack/AI-native-product fit. Two more infra-flavored
+"Software Engineer, X" postings were opened and excluded despite having *no*
+explicit years number anywhere in the text: "Software Engineer, Core
+Services" (distributed-systems/caching/Temporal depth beyond the resume) and
+"Software Engineer, ChatGPT Infrastructure" (explicitly states "We're hiring
+Senior and Staff Engineers" in prose despite a plain title and zero digits) —
+a reminder that the absence of a numeric years bar is not itself a green
+light; always read the full "About the Role"/"You Might Thrive If" text, not
+just grep for "years". "Data Engineer, Core Experimentation" (Seattle) also
+looked promising at a glance but requires "8+ years of any software
+engineering experience" buried after an initial "3+ years as a data
+engineer" line — read past the first years mention on data-adjacent titles.
