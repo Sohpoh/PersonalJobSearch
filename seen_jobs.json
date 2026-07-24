@@ -243,5 +243,35 @@
     "title": "Software Engineer, Codex - Enterprise Controls",
     "company": "OpenAI",
     "first_seen": "2026-07-20"
+  },
+  "https://www.metacareers.com/profile/job_details/1048049836887307/": {
+    "title": "Software Engineer, Machine Learning",
+    "company": "Meta",
+    "first_seen": "2026-07-24"
+  },
+  "https://www.metacareers.com/profile/job_details/1047213644723722/": {
+    "title": "Business Engineer",
+    "company": "Meta",
+    "first_seen": "2026-07-24"
+  },
+  "https://www.amazon.jobs/jobs/10467661": {
+    "title": "Software Development Engineer, Amazon Bedrock AgentCore",
+    "company": "Amazon",
+    "first_seen": "2026-07-24"
+  },
+  "https://openai.com/careers/full-stack-software-engineer-cybersecurity-products-san-francisco/": {
+    "title": "Full Stack Software Engineer, Cybersecurity Products",
+    "company": "OpenAI",
+    "first_seen": "2026-07-24"
+  },
+  "https://openai.com/careers/software-engineer-cyber-frontier-san-francisco/": {
+    "title": "Software Engineer, Cyber Frontier",
+    "company": "OpenAI",
+    "first_seen": "2026-07-24"
+  },
+  "https://openai.com/careers/software-engineer-chatgpt-shopping-san-francisco/": {
+    "title": "Software Engineer, ChatGPT Shopping",
+    "company": "OpenAI",
+    "first_seen": "2026-07-24"
   }
 }
