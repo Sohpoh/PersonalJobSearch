@@ -36,6 +36,13 @@ worth surfacing despite the years gap vs. an early-career resume. Check for
 new postings under this specific title each run rather than the broader
 "Applied AI Architect" family.
 
+**2026-07-28 check**: All 20 listings under this filter are still the Applied
+AI Architect/Solutions Architect/Security Architect/Technical Evangelist
+pre-sales family (same excluded pattern as prior runs). The one exception
+title, "Applied AI Engineer, Beneficial Deployments," did not have a posting
+this run — worth continuing to check for it specifically since it's the one
+genuine engineering role in this department.
+
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
 any URL) auto-opens a specific job's detail pane rather than a plain list —
@@ -80,6 +87,37 @@ strong C++/CUDA/GPU-inference skills with no real overlap to the resume's
 Python/agentic-AI/backend background, so it was ruled out on skill mismatch,
 not seniority. Worth specifically scanning for "New College Grad" or "New
 Grad" tagged titles each run as a way to skip past the senior-skewed bulk.
+
+**2026-07-27 check**: Sampled 4 pages (40 postings, ~1153 total roles now).
+Same senior/director/non-US pattern held for most, but found a new pocket
+worth checking each run: the "AI Safety and Security Engineering" team (job
+IDs JR2021882-888, appeared together on one page) mixes senior titles
+(Senior Manager, Distinguished Engineer) with genuinely non-senior ones that
+don't say "Senior" anywhere — "Security Research Engineer", "Evaluation and
+ML Systems Engineer" (5+ years — too big a gap, skip), and "Harness and
+Platform Engineer" (unopened this run). Also worth checking each run:
+"Machine Learning Engineer, AI Safety" (JR2021784, Content Safety/ML
+Fairness/Robustness for LLMs) — only 2+ years + Master's/PhD-or-equivalent,
+a genuine non-senior match, though the content-safety/bias specialization
+itself isn't on the resume so treat as a stretch. Title pattern to watch:
+any "AI Safety[...]Engineering" team posting without "Senior/Staff/Principal/
+Distinguished/Director/Manager" in the title is worth opening regardless of
+how technical-sounding the neighboring senior titles are.
+
+**2026-07-28 check**: Sampled 4 "Latest"-sorted pages (40 postings). Same
+senior/director/non-US pattern held for the bulk. Found a new plain-titled
+"Applied AI Engineer" posting (JR2018178 in one location, JR2018179 in
+another — same team, two location variants) that isn't part of the
+previously-seen title families — opened it and it requires "5+ years of
+hands-on experience building and deploying ML/AI systems," too big a gap
+vs. the resume's ~2 years, so excluded. Worth rechecking this title each run
+in case a lower-experience variant appears. No "AI Safety and Security
+Engineering" or "New College Grad" postings surfaced in this run's 4-page
+sample (they may still exist further in the list — a keyword search for
+"AI Safety" was attempted but the site's keyword box drops the
+Artificial-Intelligence/full-time filter params entirely and returns
+generic results, so it isn't a reliable way to jump to a specific team;
+paging remains the only verified method).
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
@@ -136,6 +174,46 @@ has appeared with only a 3+ years bar in London, UK — and "Research Engineer
 FAIR/Research Scientist titles here) has had postings with just a 3+ years
 bar and no PhD requirement — don't rule either out by title alone.
 
+**2026-07-27 update**: Verified the job-ID-as-recency-signal approach continues
+to work well for dedup here — nearly every posting opened this run
+("Software Engineer, Machine Learning", "Software Engineer, Machine Learning
+RecSys" ×2, "Software Engineer, Infrastructure" ×2, "Business Support
+Engineer" ×3 variants, "Business Engineer, Business Agents") turned out to
+already be logged in `seen_jobs.json` from a prior run even though the exact
+job ID hadn't been individually re-checked before — always extract the
+numeric ID from the href and check it against `seen_jobs.json` by ID (not
+by exact URL string) since Meta/Amazon URLs have used inconsistent formats
+across runs (`/jobs/<id>/` vs `/profile/job_details/<id>/`, with/without
+trailing slash) and a naive full-URL match will falsely say "not seen" for
+already-reported jobs. Genuinely new this run: two more "Software Engineer,
+Machine Learning RecSys" postings (Sunnyvale, CA +3 locations) at 2+/1+ years
+and 3+/2+ years respectively — this title continues to be a reliable
+low-years, high-skill-overlap match each run, worth specifically searching
+for by title. The generic "Software Engineer, X" boilerplate without an
+explicit years number (seen on "Software Engineer, Infrastructure" and
+"Software Engineer, Product" postings) reuses identical responsibilities
+text ("driving change within an organization and leading complex technical
+projects", "set direction and goals for teams, lead major initiatives") to
+the explicit "8+ years" postings — treat that responsibilities-boilerplate
+phrasing itself as a senior signal even when the years number is missing.
+
+**2026-07-28 update**: Only one page sampled this run (10 most-recent
+postings) since the first page already surfaced the relevant title families.
+Confirmed "Business Support Engineer" (Dublin, Ireland, job 1739576487064198,
+3+ years, full-stack/REST-API/cloud overlap) had good skill fit but was
+excluded on location — Dublin isn't in the resume profile's "US and London,
+UK" preference list, a reminder to check location against Additional
+Preferences even when skills clearly match. All plain "Software Engineer, X"
+titles opened this run (Android, Machine Learning, Infrastructure, Product)
+used the "8+ years OR 4+ years with PhD" boilerplate consistently, including
+one, "Software Engineer, Machine Learning" (Sunnyvale, job 998357492128826),
+that had looked promising given the 2026-07-24 note about a UK posting with
+no years bar — that exception doesn't generalize to this US posting, so
+continue opening each one individually rather than assuming by title. Two
+"Software Engineer, Machine Learning RecSys" postings on the page were
+already in `seen_jobs.json` from 2026-07-27, confirming that family recurs
+across runs with stable-ish job IDs (unlike most other Meta titles).
+
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
 is a marketing landing page, not a search page — the query params don't do
@@ -169,6 +247,25 @@ override a mismatched role function. Sampled 5 "most-recent"-sorted pages
 this run (up from prior runs' 1 page of 10) since Kiro/AgentCore/Bedrock
 postings didn't all surface on page 1 — worth continuing at this depth.
 
+**2026-07-27 update**: Sampled 5 "most-recent" pages again. Faster extraction
+via `browser_evaluate` on `a[href*="/jobs/"]` (grabbing href + innerText only,
+skipping the full snapshot) works well for scanning titles quickly, but it
+does NOT capture the `Updated: M/D/YYYY` date shown on each card — that
+requires reading the full card innerText/snapshot instead. Since the job-ID
+dedup check catches previously-seen postings anyway, this wasn't a problem
+this run, but worth remembering if date-based filtering is ever needed
+directly from the list view. Every promising-looking posting this run
+("Software Development Engineer, Developer Agents and Experiences",
+"Software Development Engineer, Amazon Bedrock AgentCore", "Software
+Development Engineer, Kiro", "Software Development Engineer, Prime Video
+Sports News and Linear") turned out to already be in `seen_jobs.json` from
+2026-07-02/07-15/07-24 — zero genuinely new Amazon matches this run despite
+the Kiro/AgentCore/Developer-Agents title families still being present and
+still fitting. "Software Development Engineer, Annapurna Labs, Elastic
+Collectives" (job 10484052) had the standard 3+ year bar but required C/C++
+for silicon/networking-adjacent work — no Python/AI overlap, excluded on
+skill mismatch despite the low years bar.
+
 **2026-07-20 update**: That boilerplate is specific to plain "Software
 Development Engineer" titles. "Sr. Software Development Engineer"/"Sr.
 Software Engineer" postings consistently use a different, more senior
@@ -182,6 +279,21 @@ Architect" (GTM/pre-sales flavored, distinct from plain SDE roles) carry an
 8-10+ year bar, same pattern as Anthropic's Applied AI Architect family —
 exclude on sight. This run's 10 most-recent AI-filtered postings were
 entirely made up of these senior/PhD/pre-sales/manager patterns — zero fits.
+
+**2026-07-28 update**: Sampled the top 10 "most-recent"-sorted results (didn't
+page further since all three engineering-relevant new job IDs appeared on
+page 1). New matches: "Software Development Engineer, AWS Agentic AI"
+(job 10486378) and "Software Development Engineer, Developer Agents and
+Experiences, Production Engineering" (job 10486685), both Seattle WA,
+standard 3+ year SDE bar, both building agent control-plane/runtime
+infrastructure — strong direct fits. "Software Development Engineer, Kiro"
+(job 10486697, Seattle WA) also matched — this is a new job ID for the Kiro
+team even though the title has appeared before, confirming Kiro reqs churn
+IDs frequently and should be re-checked by ID each run rather than assumed
+duplicate by title. Non-engineering postings on the same page (Sr. GTM Lead,
+AI/ML Team Manager, 3x Applied Scientist, Sr. TPM, Sr. Worldwide Partner
+Specialist) were skipped without opening — sales/management/PhD-flavored
+titles, consistent with patterns excluded in every prior run.
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
@@ -278,3 +390,44 @@ just grep for "years". "Data Engineer, Core Experimentation" (Seattle) also
 looked promising at a glance but requires "8+ years of any software
 engineering experience" buried after an initial "3+ years as a data
 engineer" line — read past the first years mention on data-adjacent titles.
+
+**2026-07-27 update**: Confirmed board now has ~85 flat listings under the
+filter. Faster check method found: `document.body.innerText.match(/[^.]*\d+\+?
+years?[^.]*\./gi)` plus a `/Senior|Staff|Principal/gi` match on a job's detail
+page pulls out the years/seniority sentence directly, much faster than
+reading the whole "You Might Thrive If" block manually — use this as a first
+pass, but still skim the full thrive section afterward since some
+disqualifying signals (wrong skill domain, e.g. growth/marketing analytics)
+don't show up as a years number at all. New matches found outside Codex:
+"Full Stack Software Engineer, ChatGPT Finances" and "Full Stack Software
+Engineer, ChatGPT ImageGen" — both no explicit years/seniority language,
+full-stack consumer-product engineering (frontend+backend+API), reasonable
+fit though frontend depth is a stretch vs. the resume's backend lean. Ruled
+out this run (all opened individually, all had explicit high bars once
+checked): "Full Stack Software Engineer, OpenAI Edu" (5+ years), "Software
+Engineer, Full Stack, Revenue Platform" (5+ years), "Software Engineer,
+Payments" (5+ years, payments-systems specific), "Software Engineer,
+Monetization Product & Platform" (7+ years), "Software Engineer, Ad Formats"
+(7+ years — confirms the whole Ads/monetization family stays at 7+ regardless
+of specific sub-title), "Software Engineer, Developer Productivity" (5+
+years + heavy Kubernetes/Terraform infra specialization), "Software Engineer,
+Youth Well-Being" and "Software Engineer, Localization" (both explicitly say
+"Senior Software Engineer" in the About-the-Role prose despite plain titles).
+"Full Stack Software Engineer, Growth" had no years bar but is a growth-
+marketing/A-B-testing/funnel-optimization function, not a skill match to the
+resume — a reminder that "no years bar" alone doesn't make a role a fit if
+the actual function is off. Roughly 25 unopened postings remain
+(software-engineer-database-systems, data-infrastructure, delivery-cd,
+observability, financial-engineering, build-systems-ci, caching-infrastructure,
+and a few others) if a deeper future pass is wanted.
+
+**2026-07-28 update**: Board shows ~86 listings, but only one link wasn't
+already in `seen_jobs.json`: "Research Engineer, Retrieval & Search, Applied
+Engineering" (San Francisco). Its direct URL returns a 404, and even clicking
+through from the search-results card (client-side route) lands on the same
+404 page — the posting is listed in the search index but the underlying job
+page is gone, likely closed since indexing. Treated as not currently
+open and excluded rather than reported. If this happens again, it's worth
+noting as a general site quirk: don't assume a link surfaced in the search
+DOM is still live — a 404 on click means skip it, not a bug in the
+extraction method.
