@@ -43,6 +43,17 @@ title, "Applied AI Engineer, Beneficial Deployments," did not have a posting
 this run — worth continuing to check for it specifically since it's the one
 genuine engineering role in this department.
 
+**2026-07-31 check**: Same 20-listing pre-sales/architect family, no change.
+"Applied AI Engineer, Beneficial Deployments" still absent (only the
+Manager-level "Head of Applied AI Architecture, Beneficial Deployments" and
+"Manager, Applied AI Engineering, Beneficial Deployments (Life Sciences)"
+appeared, both management not IC). Zero matches again.
+
+**2026-08-05 check**: Same 20-listing pre-sales/architect family, identical
+title set to 2026-07-31. "Applied AI Engineer, Beneficial Deployments" still
+absent. Zero matches again — this department has now gone 3+ consecutive
+runs with no genuine engineering opening.
+
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
 any URL) auto-opens a specific job's detail pane rather than a plain list —
@@ -118,6 +129,29 @@ sample (they may still exist further in the list — a keyword search for
 Artificial-Intelligence/full-time filter params entirely and returns
 generic results, so it isn't a reliable way to jump to a specific team;
 paging remains the only verified method).
+
+**2026-07-31 check**: Sampled 4 "Latest"-sorted pages (40 postings, 1155
+total roles now). Same senior/director/international pattern for the bulk,
+but two plain (non-"Senior") titles stood out and were opened: "Software
+Engineer, OpenShell" (US remote) requires "8+ years... MS/PhD" despite the
+plain title — a reminder that generic-sounding titles here aren't
+automatically junior. "System Software Engineer – Data Center Compute
+Diagnostics" (Durham, NC) requires 5+ years embedded/firmware/C++ — years gap
+plus zero skill overlap with the resume. Both excluded. No New College Grad
+or AI Safety postings surfaced in this run's 4-page sample. Also confirmed
+the "Latest"-sorted result set reshuffles between page loads even when
+navigating back to the same `start=N` URL (a job seen on page 2 was still
+findable after reloading, but at a different position) — consistent with the
+reindexing behavior already noted above.
+
+**2026-08-05 check**: Sampled 4 "Latest"-sorted pages (40 postings, ~1143
+total roles, down from 1155 on 2026-07-31). Same senior/manager/international
+pattern held throughout — no New College Grad or AI Safety and Security
+Engineering team postings surfaced in this run's sample. Notable non-matches
+worth remembering: "ASIC Verification Engineer" and "Custom SOC IP
+Verification Engineer" (non-senior titles but hardware/ASIC verification,
+zero resume overlap), "Raytracing Compiler Engineer" (compiler/graphics,
+zero overlap). Zero matches again.
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
@@ -214,6 +248,37 @@ continue opening each one individually rather than assuming by title. Two
 already in `seen_jobs.json` from 2026-07-27, confirming that family recurs
 across runs with stable-ish job IDs (unlike most other Meta titles).
 
+**2026-07-31 update**: One page sampled (10 most-recent postings). "Business
+Engineer, Business Agents" and "Software Engineer, Machine Learning RecSys"
+job IDs were already in `seen_jobs.json`. All other postings opened this run
+("Software Engineer, Machine Learning - Search Algorithm, Standalone Apps
+Team", "Software Engineer - Product (Technical Leadership)", "Software
+Engineer, Product", "Software Engineer - Android, Standalone Apps Team",
+"Software Engineer, Machine Learning - Ranking, Home Feed, Standalone Apps
+Team") all carried 8-12+ year bars once opened — the Standalone Apps Team
+and "Technical Leadership"-suffixed titles both confirmed as reliably senior
+across multiple runs now. "Software Engineer, iOS" and "Sensor Hardware
+Engineer" postings appeared but were skipped without opening on function
+mismatch (resume has no mobile/hardware background) rather than years —
+worth still spot-checking these occasionally in case a low-years variant
+appears, since the site doesn't reliably signal seniority by title alone.
+Zero new matches this run.
+
+**2026-08-05 update**: One page sampled (10 most-recent postings). Confirmed
+job-ID-as-recency-signal continues to hold: "Machine Learning RecSys" job ID
+was already in `seen_jobs.json`. All others opened this run were either
+non-engineering (Product Manager), established senior "Technical Leadership"-
+suffixed titles (confirmed 12+ years via Minimum Qualifications, both
+"Software Engineer - Product (Technical Leadership)" and the ML-TL variant),
+established generic "Software Engineer, Product"/"Software Engineer,
+Infrastructure" 8+-year boilerplate (both individually re-confirmed), or
+mobile (iOS/Android — skipped without opening on function mismatch). One
+new title family opened: "Computer Vision Engineer, Reality Labs" (Redmond,
+WA) — only 3+ years but requires C++ and SLAM/camera-calibration/robotics
+specialization with zero overlap to the resume's OpenCV/DeepFace facial-
+analysis background — excluded on skill mismatch despite the low years bar.
+Zero new matches this run.
+
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
 is a marketing landing page, not a search page — the query params don't do
@@ -295,7 +360,62 @@ AI/ML Team Manager, 3x Applied Scientist, Sr. TPM, Sr. Worldwide Partner
 Specialist) were skipped without opening — sales/management/PhD-flavored
 titles, consistent with patterns excluded in every prior run.
 
-## OpenAI
+**2026-07-31 update**: Sampled top 10 "most-recent" results. New match:
+"Software Development Engineer, AWS Transform for Windows" (Santa Clara, CA)
+— standard 3+ year SDE bar, building multi-agent systems to modernize legacy
+Windows workloads, strong direct fit. This team posts near-identical
+duplicate reqs across multiple legal entities simultaneously (three job IDs
+— 10488610, 10489267, 10489268 — all with byte-identical description text,
+same location, posted same run); treat as one candidate and log all IDs to
+avoid re-surfacing the "different" duplicates next run. "Applied Scientist,
+Observability, Prime Video" required PhD or Master's+experience, consistent
+with the established Applied Scientist pattern — excluded. "Front-End
+Engineer, Kiro" reappeared (new job ID) — consistent with the 2026-07-24
+exclusion (frontend/React skill mismatch), not re-opened this run. A new
+"Software Development Engineer, Neuron Foundation Tools" posting (Annapurna
+Labs) had the standard 3+ year bar but centers on the team's C++
+compiler/runtime — same skill-mismatch pattern as the 2026-07-27 Annapurna
+Labs exclusion, excluded despite the low years bar.
+
+**2026-08-05 update**: Sampled 5 "most-recent" pages again. Strong run: 6
+new matches, all standard 3+ year SDE bar. "Software Development Engineer
+II, AWS SageMaker AI" (Bellevue, WA, job 10492392) — Model Factory
+distributed-systems platform for foundation-model training, direct AI/agent
+overlap; a byte-identical duplicate req (job 10492391) appeared same
+location, confirming the duplicate-req-across-legal-entities pattern isn't
+limited to the AWS Transform team noted previously. "Software Development
+Engineer, Kiro Web" — 3 near-identical duplicate reqs (jobs 10491873
+Portland OR, 10491871 & 10491870 both Seattle WA) building the backend for
+Kiro's agent-session web app (Agent Client Protocol) — strong fit given the
+resume's MCP/Claude Agent SDK work; treat as one candidate, log all 3 IDs.
+Plain "Software Development Engineer, Kiro" (Seattle, job 10490739) also
+matched. "Software Development Engineer, Developer Agents and Experiences,
+Production Engineering" (Seattle, job 10488273) is a new job ID for a title
+already confirmed good (job 10486685 seen 2026-07-27) — confirms this title
+churns IDs and should be rechecked each run like the Kiro family.
+"Software Development Engineer II, AWS Transform" (Dallas, TX, job
+10488611) — new location for the AWS Transform agentic-modernization team
+(prior matches were Santa Clara). New non-SWE stretch: "Data Engineer I,
+Veritas, Security Tools Foundation" (Seattle, job 10490830) — only 1+ years,
+SQL/ETL/Python overlap with the resume's Snowflake/SQL work, but a data-
+engineering function rather than software engineering; included per the
+lean-generous guidance, worth deciding case-by-case each time it recurs.
+Excluded this run on established patterns: "Applied Scientist"/"Sr. Applied
+Scientist" family (PhD or Master's+4, multiple titles across pages),
+"Sr."-prefixed SDE/SDM titles (5+ year senior boilerplate, e.g. "Software
+Development Engineer, Quick" at 5+ years despite a plain-looking title —
+reminder that the "Quick" team specifically uses the senior boilerplate, not
+the standard 3+ bar), Worldwide/Partner Specialist and Solutions Architect
+titles (GTM/pre-sales), Principal PM and Senior TPM titles, "Front-End
+Engineer, Kiro" (established frontend/React mismatch), "Head of Developer
+Enablement, Kiro" (management). Process note: the fast `a[href*="/jobs/"]`
+href+innerText extractor (used for speed when scanning titles) does NOT
+capture the `Updated: M/D/YYYY` date — confirmed again this run, repeating
+the 2026-07-27 finding. Since Amazon is the one tracked site with real
+per-posting dates, always do a second pass with the `card.innerText` variant
+(walk up from the anchor to the ancestor whose `innerText` contains
+"Updated:") before finalizing which matches make the report — don't rely on
+"most-recent sort" position alone as a proxy for the recency window.
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
 matching job (87-90+ for a 5-team filter as of 2026-07-08) in one flat list in the DOM — no
 pagination or load-more needed, no filter interaction needed either since the
@@ -431,3 +551,65 @@ open and excluded rather than reported. If this happens again, it's worth
 noting as a general site quirk: don't assume a link surfaced in the search
 DOM is still live — a 404 on click means skip it, not a bug in the
 extraction method.
+
+**2026-07-31 update**: Board shows ~90 listings. The "Research Engineer,
+Retrieval & Search, Applied Engineering" posting that 404'd on 2026-07-28 is
+live again this run (confirms postings can toggle open/closed, not just
+close permanently — worth rechecking a previously-404'd posting rather than
+assuming it's gone for good) — no years bar, matched. Did a fuller pass of
+the ~13 previously-unopened infra/ops-flavored "Software Engineer, X"
+postings this run using the regex years/seniority extraction method from
+2026-07-27. Confirmed years bars: "Database Systems" (4+ yrs + tech-lead
+scope + C++ core engine), "Data Infrastructure" (4+ yrs + distributed-data
+specialization), "Build Systems/CI" (5+ yrs), "Caching Infrastructure" (5+
+yrs), "Financial Engineering" (5+ yrs), "Scaled Abuse" (5+ yrs backend + 2+
+yrs fraud-ops), "Privacy & Compliance" (5+ yrs) — all excluded on years
+and/or skill mismatch (deep distributed-systems/Kubernetes/C++ specialization
+the resume doesn't show). Two more had **no explicit years number** but were
+excluded on skill grounds anyway: "Delivery / CD" (heavy Kubernetes/GitOps/CD
+platform ownership, zero overlap on resume) and "Reliability" (SRE/IaC/chaos-
+testing focus, zero overlap) — reinforces the standing note that "no years
+bar" doesn't itself signal fit; the qualifications/"You Might Thrive"
+text still needs individual judgment on skill overlap. Two new matches found
+among the no-years-bar postings: "Enterprise Verticals" (full-stack product
+eng for AI enterprise workflows, Python/backend overlap, customer-facing
+ownership scope is a stretch) and "Observability" (AI-native
+incident/dashboard tooling connects to the resume's LangSmith eval-framework
+work, though the team's core distributed-logging-infra depth is a gap) —
+both included as stretches per the "lean generous" guidance. "Frontend
+Engineer, Financial Web Platform" (no years bar) excluded on function
+mismatch — pure frontend role, resume has no frontend/React work despite
+listing TypeScript as a skill. Remaining unopened: engineering-manager-*
+(all management, skip on sight), growth-*/ads-*/monetization-* (established
+7+/senior patterns), android/ios-engineer-* (mobile mismatch),
+protection-scientist-engineer-* (trust-safety, established), model-designer
+(no-code UX role), founding-*/senior-staff-*/principal-* (established
+senior tiers), product-manager-legal/deployed-product-manager (PM not SWE),
+subject-matter-expert-investment-banking (finance SME not SWE) — these are
+now consistently-excluded families across 3+ runs and probably don't need
+individual re-opening each time, just a title-pattern skim to confirm no new
+non-senior variant has appeared.
+
+**2026-08-05 update**: Board shows 90 listings, flat vs. ~90 on 2026-07-31. Used the regex years/seniority extraction method to check
+several previously-unopened title patterns. New matches: "Full-Stack
+Engineer, ChatGPT Education & Learning" (SF or NYC, no years bar) — full-
+stack product engineering on AI-native learning features inside ChatGPT,
+good overlap though frontend depth is a stretch. "Software Engineer,
+Product - Core Experimentation" (Seattle, no years bar) — full-stack work on
+the Statsig-derived experimentation/rollout platform, decent backend
+overlap and a loose conceptual tie to the resume's LangSmith eval-framework
+work. Ruled out (all opened individually): "Software Engineer, Cloud
+Agents" (Codex team — despite being Codex, explicitly states "9+ years of
+professional engineering experience," a reminder the Codex "no years bar"
+pattern isn't universal either), "ChatGPT Performance Engineer" (7+ years),
+"Data Engineer, Core Experimentation" (Seattle — same "3+ years as data
+engineer, 8+ years overall" buried-bar pattern as the 2026-07-24 finding,
+recurring under this exact title), "Software Engineer, Infrastructure -
+Core Experimentation" (Seattle, no years bar but heavy low-latency/
+distributed-systems/observability-infra depth — excluded on skill grounds
+like the established Reliability/Delivery-CD pattern), "Analytics Engineer,
+Safety Systems" (5+ years, data-role function not SWE). The
+previously-unopened "Core Experimentation" (ex-Statsig) team turns out to
+have a real mix — Product/no-bar (match), Data (buried high bar, skip),
+Infrastructure (no bar but wrong skill depth, skip) — worth opening each
+individual title under this team rather than assuming from one.
