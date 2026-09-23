@@ -205,7 +205,7 @@
     "first_seen": "2026-07-15"
   },
   "https://openai.com/careers/software-engineer-codex-user-activation-san-francisco/": {
-    "title": "Software Engineer, Codex \u2014 User Activation",
+    "title": "Software Engineer, Codex — User Activation",
     "company": "OpenAI",
     "first_seen": "2026-07-15"
   },
@@ -398,5 +398,250 @@
     "title": "Software Engineer, Product - Core Experimentation",
     "company": "OpenAI",
     "first_seen": "2026-08-05"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5425724008": {
+    "title": "Associate Applied AI, Rotational Program, London",
+    "company": "Anthropic",
+    "first_seen": "2026-09-23"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5432575008": {
+    "title": "Applied AI Engineer, Startups",
+    "company": "Anthropic",
+    "first_seen": "2026-09-23"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5057647008": {
+    "title": "Applied AI Engineer, Enterprise Tech",
+    "company": "Anthropic",
+    "first_seen": "2026-09-23"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5302966008": {
+    "title": "Forward Deployed Engineer",
+    "company": "Anthropic",
+    "first_seen": "2026-09-23"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5423029008": {
+    "title": "Forward Deployed Engineer",
+    "company": "Anthropic",
+    "first_seen": "2026-09-23"
+  },
+  "https://jobs.nvidia.com/careers/job/893397830772": {
+    "title": "Security Architect - New College Grad 2026",
+    "company": "NVIDIA",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.metacareers.com/profile/job_details/1070564468548321/": {
+    "title": "Research Engineer, Monetization AI",
+    "company": "Meta",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10554903": {
+    "title": "Software Development Engineer, Kiro",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10556935": {
+    "title": "Software Development Engineer, Seller Assistant, SPX",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10555497": {
+    "title": "Software Development Engineer, Amazon Marketing Cloud Assistant",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10555248": {
+    "title": "Software Development Engineer, Agentic Workspace",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10545829": {
+    "title": "Software Development Engineer, Agentic AI, Velocity Labs",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10547170": {
+    "title": "Software Development Engineer, Specialist AI Tooling, Specialist Technology Team",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10550866": {
+    "title": "Software Development Engineer, AWS Quick (AWS Context)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10551366": {
+    "title": "Software Development Engineer (Ads bidding agents)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10558292": {
+    "title": "Software Development Engineer, Amazon (HR AI solutions)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10557210": {
+    "title": "Software Development Engineer II, PXT, HAIEX",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10551396": {
+    "title": "Software Engineer, AWS SageMaker Unified Studio",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10554681": {
+    "title": "Software Development Engineer, AWS Artifact (Compliance & Security Assurance)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10552158": {
+    "title": "Software Dev Engineer II, Enterprise Security Products",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10553856": {
+    "title": "Security Engineer, Forward Deployed Engineering",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10556787": {
+    "title": "AI Platform Data Engineer, Ring Agent Platform Org",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10557456": {
+    "title": "Machine Learning Engineer II, Amazon Music - MusicIQ",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10544628": {
+    "title": "Software Dev Engineer II-TEST, Agentic Workspaces",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10556723": {
+    "title": "Delivery Consultant - AI/ML, AWS Professional Services (HCLS)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10557661": {
+    "title": "Data Engineer, Decision Intelligence Technology",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://openai.com/careers/software-engineer-plugin-developer-platform-san-francisco/": {
+    "title": "Software Engineer, Plugin Developer Platform",
+    "company": "OpenAI",
+    "first_seen": "2026-09-23"
+  },
+  "https://openai.com/careers/software-engineer-plugin-ecosystem-san-francisco/": {
+    "title": "Software Engineer, Plugin Ecosystem",
+    "company": "OpenAI",
+    "first_seen": "2026-09-23"
+  },
+  "https://openai.com/careers/backend-software-engineer-chatgpt-imagegen-san-francisco/": {
+    "title": "Backend Software Engineer, ChatGPT ImageGen",
+    "company": "OpenAI",
+    "first_seen": "2026-09-23"
+  },
+  "https://openai.com/careers/full-stack-software-engineer-product-explorations-san-francisco/": {
+    "title": "Full Stack Software Engineer, Product Explorations",
+    "company": "OpenAI",
+    "first_seen": "2026-09-23"
+  },
+  "https://openai.com/careers/applied-ai-software-engineer-gtm-growth-engineering-san-francisco/": {
+    "title": "Applied AI Software Engineer, GTM Growth Engineering",
+    "company": "OpenAI",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/software-engineer-agent-evaluation-and-quality": {
+    "title": "Software Engineer, Agent Evaluation and Quality",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/software-engineer-agent-harness": {
+    "title": "Software Engineer, Agent Harness",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/software-engineer-enterprise-platform": {
+    "title": "Software Engineer, Enterprise Platform",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/software-engineer-security": {
+    "title": "Software Engineer, Security",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/software-engineer-enterprise": {
+    "title": "Software Engineer, Enterprise",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/forward-deployed-engineer-emea": {
+    "title": "Forward Deployed Engineer - EMEA",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.citadel.com/careers/details/quantitative-developer-data-strategies-group/": {
+    "title": "Quantitative Developer – Data Strategies Group",
+    "company": "Citadel",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.citadel.com/careers/details/sector-data-scientist-central-team/": {
+    "title": "Sector Data Scientist, Central Team",
+    "company": "Citadel",
+    "first_seen": "2026-09-23"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-AI-Solutions-Developer/14102": {
+    "title": "AI Solutions Developer",
+    "company": "Two Sigma",
+    "first_seen": "2026-09-23"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Quantitative-Software-Engineer/13045": {
+    "title": "Quantitative Software Engineer",
+    "company": "Two Sigma",
+    "first_seen": "2026-09-23"
+  },
+  "https://cursor.com/careers/software-engineer-new-grad-2027": {
+    "title": "Software Engineer, New Grad 2027",
+    "company": "Cursor",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.citadel.com/careers/details/software-engineer-university-graduate-us/": {
+    "title": "Software Engineer – University Graduate (US)",
+    "company": "Citadel",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.citadel.com/careers/details/software-engineer-university-graduate-europe/": {
+    "title": "Software Engineer – University Graduate (Europe)",
+    "company": "Citadel",
+    "first_seen": "2026-09-23"
+  },
+  "https://openai.com/careers/software-engineer-full-stack-core-experimentation-seattle/": {
+    "title": "Software Engineer, Full-Stack - Core Experimentation",
+    "company": "OpenAI",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10545820": {
+    "title": "Software Development Engineer, Agentic AI, Velocity Labs (duplicate req)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10552881": {
+    "title": "Security Engineer, Forward Deployed Engineering (duplicate req)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10552897": {
+    "title": "Security Engineer, Forward Deployed Engineering (duplicate req)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
+  },
+  "https://www.amazon.jobs/en/jobs/10551908": {
+    "title": "Delivery Consultant - AI ML, Professional Services (HCLS) (sister req, New York)",
+    "company": "Amazon",
+    "first_seen": "2026-09-23"
   }
 }

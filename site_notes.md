@@ -54,6 +54,24 @@ title set to 2026-07-31. "Applied AI Engineer, Beneficial Deployments" still
 absent. Zero matches again — this department has now gone 3+ consecutive
 runs with no genuine engineering opening.
 
+**2026-09-23 check**: The department changed a lot since 08-05 (~48 listings,
+up from 20) and now includes real engineering-flavored titles beyond the
+Architect family: "Applied AI Engineer, Enterprise Tech" (US) and "…,
+Startups" (London), "Forward Deployed Engineer" (US + London, plus Paris/
+Munich), and "Associate Applied AI, Rotational Program, London" (0-2 yrs —
+the first entry-level match here). The "Applied AI Engineer"/FDE titles all
+ask 4+ years customer-facing (the London FDE's screening question asks 8+),
+so they're stretches. "Applied AI, Research Engineer" needs 6+ years;
+"Applied AI Engineer, Beneficial Deployments (Life Sciences)" (London)
+requires deep life-sciences research background; "Technical Deployment Lead"
+is a lead-level, no-code role — all excluded. "Applied AI Architect" and
+"Manager…" titles are still the excluded pre-sales/management family.
+Faster method than opening pages: run a `fetch()` of each
+`/anthropic/jobs/<id>` from `browser_evaluate` and regex the "N+ years"
+sentences. The board list is `a[href*="/jobs/"]` links (title | location in
+`innerText`), all in the DOM at once. A "New" badge shows next to fresh
+titles.
+
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
 any URL) auto-opens a specific job's detail pane rather than a plain list —
@@ -152,6 +170,22 @@ worth remembering: "ASIC Verification Engineer" and "Custom SOC IP
 Verification Engineer" (non-senior titles but hardware/ASIC verification,
 zero resume overlap), "Raytracing Compiler Engineer" (compiler/graphics,
 zero overlap). Zero matches again.
+
+**2026-09-23 check**: Sampled 4 "Latest"-sorted pages (1098 total roles, 110
+pages). Page 1 was entirely China/Taiwan/Thailand; pages 2-4 were the usual
+senior/Architect/international mix. One "New College Grad 2026" posting
+surfaced ("Security Architect - New College Grad 2026", Santa Clara) —
+silicon-security work (secure boot/root of trust/FIPS), included only as a
+weak stretch. Also seen and skipped: "Research Scientist, Physical AI —
+PhD New College Grad 2026", PhD/intern postings. Reliable way to page:
+`[...document.querySelectorAll('button')].find(b => /Next jobs/i.test(b.getAttribute('aria-label')||b.innerText)).click()` via `browser_evaluate` (the
+`nav[aria-label=…] button:last-of-type` selector I tried first returned null).
+Use `browser_snapshot` with a `filename` and grep the `View job` buttons out
+of the saved YAML instead of dumping the snapshot inline (save it outside
+the project directory). To open one job directly, navigate to
+`jobs.nvidia.com/careers?query=<JR id>`; it opens the detail pane inline and
+the resulting URL carries a `pid=` you can use for a direct link
+(`jobs.nvidia.com/careers/job/<pid>`).
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
@@ -278,6 +312,19 @@ WA) — only 3+ years but requires C++ and SLAM/camera-calibration/robotics
 specialization with zero overlap to the resume's OpenCV/DeepFace facial-
 analysis background — excluded on skill mismatch despite the low years bar.
 Zero new matches this run.
+
+**2026-09-23 update**: Sampled 2 pages (20 postings; `&page=2` works by
+direct navigation). Job detail HTML fetched via `fetch()` does NOT contain the
+qualifications (client-rendered) — navigate to each `/profile/job_details/<id>/`
+and read `document.body.innerText` from "Minimum Qualifications" instead.
+Confirmed again: plain "Software Engineer, Product"/"Infrastructure" London
+postings use the senior responsibilities boilerplate ("Set direction and
+goals for teams, lead major initiatives"; "driving change within an
+organization and leading complex technical projects") even with no years
+number — excluded. "Software Engineer, Systems ML" (no years bar) needs
+GPU/compiler/ML-systems specialization — excluded on skill mismatch.
+"Research Engineer, Monetization AI" (no years bar, research-flavored)
+included as a stretch. Two "Machine Learning RecSys" IDs were already logged.
 
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
@@ -416,6 +463,36 @@ per-posting dates, always do a second pass with the `card.innerText` variant
 (walk up from the anchor to the ancestor whose `innerText` contains
 "Updated:") before finalizing which matches make the report — don't rely on
 "most-recent sort" position alone as a proxy for the recency window.
+**2026-09-23 update — SITE CHANGED**: The tracked landing page
+(`/content/en/artificial-intelligence-ai?...`) no longer has the embedded
+`#jobs-search` widget or sort `<select>` — it's now a pure marketing page, so
+the older navigation steps above don't work. Use the regular search page
+instead: `https://www.amazon.jobs/en/search?base_query=AI&sort=recent&...`.
+It shows real dates ("Posted September 23, 2026", "Updated about 3 hours
+ago"). Fastest method: from that page, `fetch()` the site's own JSON from
+`browser_evaluate`: `/en/search.json?base_query=AI&sort=recent&
+normalized_country_code[]=USA&normalized_country_code[]=GBR&
+schedule_type_id[]=Full-Time&category[]=software-development&
+category[]=machine-learning-science&result_limit=100&offset=0`. Fields per job:
+`id_icims`, `posted_date`, `title`, `normalized_location`,
+`basic_qualifications`, `preferred_qualifications`, `description_short`. Gotchas:
+`country[]=USA` is silently ignored by the JSON endpoint — use
+`normalized_country_code[]`. With only keyword "AI" there were 6,242 hits,
+so I added `category[]` filters (1,116 hits) — that's an addition to the
+user's filters, flagged in the report; a second unfiltered-by-category pass
+for titles containing Engineer/Developer/Data caught extra matches (e.g.
+"Security Engineer, Forward Deployed Engineering", "AI Platform Data
+Engineer, Ring Agent Platform Org"), so keep doing both passes. Job IDs are
+now 105xxxxxx (they were 104xxxxxx in July). Job links are
+`amazon.jobs/en/jobs/<id>`. Fresh AI/agent team names to look for: Kiro,
+Seller Assistant, Marketing Cloud Assistant, Agentic Workspace, Velocity Labs
+(Agentic AI), Specialist AI Tooling, AWS Context (listed under "Quick"),
+Applied AI Solutions org, AWS Forward Deployed Engineering. Basic
+qualifications in the JSON make the years bar a one-line regex; "…III" and
+"Sr." titles use 5+ years, "SDE II" and plain SDE use 3+. AWS FDE "Security
+Engineer" reqs need only 2+ years.
+
+## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
 matching job (87-90+ for a 5-team filter as of 2026-07-08) in one flat list in the DOM — no
 pagination or load-more needed, no filter interaction needed either since the
@@ -613,3 +690,83 @@ previously-unopened "Core Experimentation" (ex-Statsig) team turns out to
 have a real mix — Product/no-bar (match), Data (buried high bar, skip),
 Infrastructure (no bar but wrong skill depth, skip) — worth opening each
 individual title under this team rather than assuming from one.
+
+**2026-09-23 update**: 101 listings in the flat list (via `a[href*="/careers/"]`
+excluding search/root links). Detail pages fetch fine with `fetch('/careers/<slug>/')`
+from `browser_evaluate` (server-rendered), so the years regex can be run on
+a batch of slugs at once; for no-years postings, read the text after "You
+might thrive" instead. New matches: the "Plugin Developer Platform" and
+"Plugin Ecosystem" teams (MCP/connectors/plugins for ChatGPT+Codex, no years
+bar — the closest match to the resume's MCP + RBAC work seen here so far).
+Confirmed high bars (excluded): Codex for Finance backend/full-stack (5+),
+Gov full-stack (9+), "Product Engineer, Full Stack - Agents" (7+), Consumer
+Health and Healthcare (5+ each), Native Learning Experiences (5+ nice-to-
+have), Habitat/Online Data (8+), Monetization ML Infrastructure (7+). No-
+years but excluded on skill/function: "Product Engineer, Cyber" (Go +
+networking/infra), "Emerging Products" (strong frontend), "Ads Integrity"
+(large-scale anti-abuse infra), "Model Deployment, ChatGPT Engineering"
+London (GPU-fleet deployment infra), plain "GTM Growth Engineering". Also
+present: "Software Engineer, Full-Stack - Core Experimentation" (Seattle) —
+same Statsig team as the 08-05 "Product - Core Experimentation" match, no
+years bar, reported as a stretch sibling. Check every listed slug against
+`seen_jobs.json` AND against this section's excluded lists before opening.
+
+## Cursor
+`cursor.com/careers` is a single static list of ~120 roles (all in the DOM,
+no pagination or filters needed), each linking to `cursor.com/careers/<slug>`.
+No posted dates anywhere, so recency is unverifiable and everything not in
+`seen_jobs.json` is "new". Extract with `a[href*="careers/"]` and read
+`innerText` (title | team | Full-time | location). Detail pages are
+server-rendered: `fetch('/careers/<slug>')` then remove `script,style,noscript`
+before reading `textContent` (otherwise you get a wall of Next.js script
+text) and look at the "You may be a fit if" section. Most engineering
+postings state no years number; the exception seen: US "Forward Deployed
+Engineer" asks 5+ years (the London/EMEA one gives no number). Roles are
+split into Sales/Solutions/Customer Success (skip — GTM) and Engineering.
+The engineering roles that fit: Agent Evaluation and Quality, Agent Harness,
+Enterprise Platform (RBAC/SCIM). Also present each run: Bugbot/Product/
+Generalist (product-taste heavy), ML/infra/pretraining/RL (specialist),
+and "Software Engineer, New Grad 2027" (requires projected graduation Spring
+2027 + a reviewable shipped project; reported as a long shot since the
+resume's M.S. end date is unknown).
+
+## Citadel
+`citadel.com/careers/open-opportunities/` lists ~60 roles, 10 per page over
+6 pages, newest-first by default; no posted dates shown. "Software Engineer –
+University Graduate (US/Europe)" programs appear near the top and state no
+experience cap (just a Bachelor's/Master's in CS) — reported as long shots. Pages are directly
+navigable at `/careers/open-opportunities/page/N/` and each server-renders
+its cards, so `fetch()` from `browser_evaluate` on pages 1-6 and reading
+`a[href*="/careers/details/"]` gives everything at once. Detail pages
+(`/careers/details/<slug>/`) are short, also fetchable; strip
+`script,style,nav,header,footer` and read the "Skills & Talents"/"Skills and
+Qualifications" section. The list is dominated by intern/PhD/graduate/
+trader/quant-researcher roles — skip those. Engineering-relevant ones seen:
+"Software Engineer" (6+ years), "Site Reliability Engineer" (no years bar,
+SRE function — skipped), "Quantitative Developer – Data Strategies Group"
+(good fit), "Sector Data Scientist, Central Team" (up to 2 years),
+"Global Quantitative Strategies | Machine Learning Engineer" (needs
+PyTorch/C++/CUDA distributed-training depth — skipped), "Quantitative
+Research Engineer" (C++ — skipped), "Equities Engineering | Product Frontend
+Engineer" (frontend — skipped).
+
+## Two Sigma
+`careers.twosigma.com/careers/OpenRoles` shows 30 roles, 10 per page,
+sorted alphabetically by title (NOT by recency), no posted dates. Paging
+works by URL: `?jobRecordsPerPage=10&jobOffset=0|10|20` (a larger
+`jobRecordsPerPage` is ignored; clicking the page-number links via JS
+navigates the page and destroys the evaluate context — navigate by URL
+instead). Job pages are `/careers/JobDetail/New-York-New-York-United-States-<Title-Slug>/<id>`
+and appear fetchable with any slug as long as the numeric id is right; strip
+script/style/nav and read "You should possess the following qualifications".
+Postings state "Minimum N year(s) required; X-Y years preferred" so the
+minimum is very low (1 year) even when the preferred range is 5-10 — treat
+the minimum as the hard bar and the preferred range as the gap to note.
+Engineering-relevant roles this run: "AI Solutions Developer" (strong fit),
+"Quantitative Software Engineer" (stretch), "Quantitative Software Engineer:
+Fast Engineering"/"Quantitative Architect/Software Engineer: Macro
+Engineering"/"Quantitative Software Architect" (senior/architect-flavored,
+skipped), "GPU Performance Engineer", "Modeling Workflow Specialist" (GPU
+acceleration), "Infrastructure Engineer - Linux", "Production Engineer"
+(trading-systems SRE), "Head of High-Frequency Market Data Engineering" —
+all skipped on skill/seniority mismatch.

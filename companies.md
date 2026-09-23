@@ -15,4 +15,12 @@ https://www.amazon.jobs/content/en/artificial-intelligence-ai?country%5B%5D=US&c
 ## OpenAI
 https://openai.com/careers/search/?c=e1e973fe-6f0a-475f-9361-a9b6c095d869%2Cf002fe09-4cec-46b0-8add-8bf9ff438a62%2Cab2b9da4-24a4-47df-8bed-1ed5a39c7036%2C29457f80-62c5-4420-b64b-53037e8dc25e%2C97c2487e-7ec1-446a-a664-58e7c12fb0e9
 
+## Cursor
+https://cursor.com/careers
+
+## Citadel
+https://www.citadel.com/careers/open-opportunities/
+
+## Two Sigma
+https://careers.twosigma.com/careers/OpenRoles
 
