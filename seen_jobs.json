@@ -205,7 +205,7 @@
     "first_seen": "2026-07-15"
   },
   "https://openai.com/careers/software-engineer-codex-user-activation-san-francisco/": {
-    "title": "Software Engineer, Codex — User Activation",
+    "title": "Software Engineer, Codex \u2014 User Activation",
     "company": "OpenAI",
     "first_seen": "2026-07-15"
   },
@@ -585,7 +585,7 @@
     "first_seen": "2026-09-23"
   },
   "https://www.citadel.com/careers/details/quantitative-developer-data-strategies-group/": {
-    "title": "Quantitative Developer – Data Strategies Group",
+    "title": "Quantitative Developer \u2013 Data Strategies Group",
     "company": "Citadel",
     "first_seen": "2026-09-23"
   },
@@ -610,12 +610,12 @@
     "first_seen": "2026-09-23"
   },
   "https://www.citadel.com/careers/details/software-engineer-university-graduate-us/": {
-    "title": "Software Engineer – University Graduate (US)",
+    "title": "Software Engineer \u2013 University Graduate (US)",
     "company": "Citadel",
     "first_seen": "2026-09-23"
   },
   "https://www.citadel.com/careers/details/software-engineer-university-graduate-europe/": {
-    "title": "Software Engineer – University Graduate (Europe)",
+    "title": "Software Engineer \u2013 University Graduate (Europe)",
     "company": "Citadel",
     "first_seen": "2026-09-23"
   },
@@ -643,5 +643,55 @@
     "title": "Delivery Consultant - AI ML, Professional Services (HCLS) (sister req, New York)",
     "company": "Amazon",
     "first_seen": "2026-09-23"
+  },
+  "https://www.metacareers.com/profile/job_details/2021969455351795": {
+    "title": "Business Engineer",
+    "company": "Meta",
+    "first_seen": "2026-09-28"
+  },
+  "https://www.amazon.jobs/en/jobs/10561978": {
+    "title": "Software Development Engineer, Amazon Quick",
+    "company": "Amazon",
+    "first_seen": "2026-09-28"
+  },
+  "https://www.amazon.jobs/en/jobs/10560299": {
+    "title": "Software Development Engineer II, Agentic WorkSpaces Client",
+    "company": "Amazon",
+    "first_seen": "2026-09-28"
+  },
+  "https://www.amazon.jobs/en/jobs/10559473": {
+    "title": "Software Development Engineer, Global Media and Entertainment Security",
+    "company": "Amazon",
+    "first_seen": "2026-09-28"
+  },
+  "https://www.amazon.jobs/en/jobs/10554286": {
+    "title": "Software Development Engineer - Expert Consultant, AGI - Data Services",
+    "company": "Amazon",
+    "first_seen": "2026-09-28"
+  },
+  "https://openai.com/careers/software-engineer-cooperative-ai-san-francisco/": {
+    "title": "Software Engineer, Cooperative AI",
+    "company": "OpenAI",
+    "first_seen": "2026-09-28"
+  },
+  "https://openai.com/careers/machine-learning-engineer-monetization-aiml-san-francisco/": {
+    "title": "Machine Learning Engineer, Monetization AI/ML",
+    "company": "OpenAI",
+    "first_seen": "2026-09-28"
+  },
+  "https://openai.com/careers/machine-learning-engineer-core-experimentation-seattle/": {
+    "title": "Machine Learning Engineer, Core Experimentation",
+    "company": "OpenAI",
+    "first_seen": "2026-09-28"
+  },
+  "https://cursor.com/careers/software-engineer-user-operations": {
+    "title": "Software Engineer, User Operations",
+    "company": "Cursor",
+    "first_seen": "2026-09-28"
+  },
+  "https://cursor.com/careers/security-grc-engineer": {
+    "title": "Security GRC Engineer",
+    "company": "Cursor",
+    "first_seen": "2026-09-28"
   }
 }

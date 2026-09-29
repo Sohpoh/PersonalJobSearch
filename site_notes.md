@@ -187,6 +187,14 @@ the project directory). To open one job directly, navigate to
 the resulting URL carries a `pid=` you can use for a direct link
 (`jobs.nvidia.com/careers/job/<pid>`).
 
+**2026-09-28 check**: Sampled 4 "Latest"-sorted pages (40 postings, 1115 total
+roles now). Same senior/director/international/PM pattern held throughout.
+Two more "ASIC Verification Engineer... New College Grad 2027" postings
+appeared (Durham NC, Austin TX) — same hardware/ASIC mismatch as prior New
+College Grad hardware roles, excluded on skill overlap. No "AI Safety and
+Security Engineering" or plain "Applied AI Engineer" postings surfaced in
+this run's sample. Zero matches again.
+
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
 (`teams[n]=`, `roles[n]=`, `sort_by_new=true`). Pagination is via a `&page=N`
@@ -325,6 +333,22 @@ number — excluded. "Software Engineer, Systems ML" (no years bar) needs
 GPU/compiler/ML-systems specialization — excluded on skill mismatch.
 "Research Engineer, Monetization AI" (no years bar, research-flavored)
 included as a stretch. Two "Machine Learning RecSys" IDs were already logged.
+
+**2026-09-28 update**: Sampled 2 pages (20 postings). New match: "Business
+Engineer" (London, UK, job 2021969455351795) — 5+ years, PHP/Python/JS
+overlap, reported as a stretch (bigger gap than the 3+ year variants seen in
+prior runs). New title "Security Engineer, Applied AI" (London) requires 5+
+years hands-on security-engineering specialization (detection/threat-intel/
+offensive security) — excluded on skill-depth mismatch despite resume's
+security-adjacent RBAC/guardrail work. Confirmed again: "Software Engineer,
+Product" and "Software Engineer, Infrastructure" postings with no explicit
+years number but the "driving change...leading complex technical projects"
+responsibilities phrase are a reliable senior signal (both excluded, one in
+Remote UK, one in London). "Software Engineer, Systems ML" and multiple
+"(Technical Leadership)"-suffixed titles skipped on established patterns
+(GPU/compiler specialization; leadership=senior). Two "SW Specialist -
+Wearables Interfaces Engineering" postings (10+ years / expert-level) —
+new title family, hardware/platform-integration specialization, excluded.
 
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
@@ -491,6 +515,44 @@ Applied AI Solutions org, AWS Forward Deployed Engineering. Basic
 qualifications in the JSON make the years bar a one-line regex; "…III" and
 "Sr." titles use 5+ years, "SDE II" and plain SDE use 3+. AWS FDE "Security
 Engineer" reqs need only 2+ years.
+
+**2026-09-28 update**: `search.json` with `category[]=software-development&category[]=machine-learning-science`
+gave 1092 hits; fetched first 100 (`result_limit=100&offset=0`, sorted recent) which
+already spans back to Sept 16 — comfortably past the 7-day window, so a single
+offset=0 fetch suffices. Extract only `{id_icims, title, normalized_location,
+posted_date, basic_qualifications}` per job in the JS `evaluate` call (not the
+full `description`/`preferred_qualifications` HTML) — pulling full records for
+100 jobs floods the tool-result with megabytes of boilerplate/legal text.
+Confirmed the base_query=AI keyword match is broad (catches generic Customer
+Service/Ads/Device SDE reqs with no real AI tie merely because "AI" appears
+somewhere in the text) — per established practice, still require an actual
+AI/ML/agent-team connection in the title or description before including a
+plain 3-year-bar SDE req, not just the keyword hit; a second `base_query=agentic`
+pass (no category filter) is a good supplementary check and turned up only
+PM/Solutions-Architect/GTM roles (pre-sales, excluded) beyond what the
+category pass already found this run — worth keeping as a quick sanity pass
+each time. New matches this run: "Software Development Engineer, Amazon
+Quick" (NY, job 10561978, 3+ yrs, explicit "AWS AI services... Agentic AI
+drives innovation" team), "Software Development Engineer II, Agentic
+WorkSpaces Client" (Seattle, job 10560299, 3+ yrs, AWS Applied AI Solutions
+org), "Software Development Engineer, Global Media and Entertainment
+Security" (Denver, job 10559473, 3+ yrs — despite the generic title, the team
+is building "an AI-powered agent that lets builders run security assessments
+... generating threat models, architecture diagrams, code review findings" —
+direct overlap with the resume's guardrails/security-scanning work, worth
+reading past a generic-sounding security title to check for an agentic
+component), "Software Development Engineer - Expert Consultant, AGI - Data
+Services" (Bellevue, job 10554286, 3+ yrs, human-in-the-loop/model-in-the-loop
+training-data pipelines for AI solutions). Excluded this run: "Software
+Development Engineer, Ads AI Core Infra" (Seattle) — team name says AI but
+the description is generic ad-lifecycle infra (accounts/permissions/campaign
+mgmt) with no actual model/agent component, a reminder that "AI" in a team
+name doesn't guarantee an AI-specific role; "Software Development Engineer -
+Test, Device Partnerships, Prime Video" (London) — penetration-testing/manual
+QA for streaming devices, no AI tie despite surfacing under the AI keyword
+search. "Seller Assistant"/"Delivery Consultant - AI/ML"/"AWS Artifact"/"Kiro"/
+"AWS Quick" postings from prior runs recurred under the same job IDs —
+already logged.
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
@@ -711,6 +773,30 @@ same Statsig team as the 08-05 "Product - Core Experimentation" match, no
 years bar, reported as a stretch sibling. Check every listed slug against
 `seen_jobs.json` AND against this section's excluded lists before opening.
 
+**2026-09-28 update**: 97 flat listings via `a[href*="/careers/"]`. New team
+found: "Software Engineer, Cooperative AI" (SF/Seattle, no years bar) — builds
+an "AI-powered knowledge system"/automation/agent systems for internal+
+external customers, direct overlap with the resume's agentic-AI/MCP work —
+included. "Machine Learning Engineer, Monetization AI/ML" (no years bar,
+despite "Monetization" normally implying the established 7+ senior family —
+this specific req reads IC-level, "Research Engineer... deploying models to
+production") and "Machine Learning Engineer, Core Experimentation" (Seattle,
+Statsig-derived team, no years bar but "led ambiguous 0-to-1 production ML
+products" phrasing suggests some seniority expectation — included as a
+stretch) both included. Confirmed high bars (excluded): "Full-Stack Software
+Engineer, Education" (5+, despite no PhD/Staff signal), "Software Engineer,
+Search Infrastructure" (2 Senior/Staff/Principal mentions in body text).
+No-years but excluded on skill mismatch: "Software Engineer, Resilience
+Engineering" (SRE/Infrastructure-as-Code, 0→1 reliability tooling — no
+overlap), "Software Engineer, Product Velocity" (Bazel/Buildkite/Kubernetes/
+Temporal monorepo build tooling — no overlap). All Android/iOS Engineer
+titles, Engineering Manager-*, Product Manager-*, Growth-*, Founding-*,
+Principal-*, Staff-*, "Subject Matter Expert, Investment Banking", "Tech Lead
+Manager", "Protection Scientist Engineer, Integrity" (both SF and London) —
+all consistent with established exclusion families, skipped without
+individual re-opening. "Backend/Full Stack Software Engineer, Codex for
+Finance" reconfirmed under the established 5+ years Codex-for-Finance bar.
+
 ## Cursor
 `cursor.com/careers` is a single static list of ~120 roles (all in the DOM,
 no pagination or filters needed), each linking to `cursor.com/careers/<slug>`.
@@ -729,6 +815,27 @@ Generalist (product-taste heavy), ML/infra/pretraining/RL (specialist),
 and "Software Engineer, New Grad 2027" (requires projected graduation Spring
 2027 + a reviewable shipped project; reported as a long shot since the
 resume's M.S. end date is unknown).
+
+**2026-09-28 update**: ~130 listings now (grew from ~120). Established fits
+(Agent Evaluation and Quality, Agent Harness, Enterprise Platform, plain
+Security) were all already in `seen_jobs.json`. Two new title families found
+and matched: "Software Engineer, User Operations" (no years bar — builds
+"AI-powered systems that synthesize customer signal at scale," dashboards/
+data pipelines, decent LLM+data overlap) and "Security GRC Engineer" (no
+years bar — SOC 2/ISO 27001/ISO 42001/AIUC-1 compliance frameworks, "use
+coding agents ... to confirm what we say is what we do," pairs the resume's
+Semgrep/Trivy/SonarQube vuln-scanning and compliance work with an AI-agent
+angle). Excluded on skill mismatch (no years bar but specialist domains, all
+opened): "Software Engineer, Client Infrastructure" (Electron/native desktop
+apps), "Software Engineer, Services Platform" (Temporal/durable-workflow
+infra), "Software Engineer, Model Routing & Inference" (GPU inference/
+distributed-systems specialist), "Software Engineer, Billing" (Stripe/
+financial-ledger specialist). "Engineering Manager, Agent & Product Security"
+and other Engineering Manager-* titles skipped by title (management). ML
+specialist family (ML Platform/Infrastructure/Research/Research Tools,
+Pretraining, RL Data, RL Environments) skipped by title per established
+pattern. GTM/Field Engineer/Forward Deployed/Account Executive/Solutions
+Architect/Regional Director families remain sales/customer-facing, skipped.
 
 ## Citadel
 `citadel.com/careers/open-opportunities/` lists ~60 roles, 10 per page over
@@ -750,6 +857,13 @@ PyTorch/C++/CUDA distributed-training depth — skipped), "Quantitative
 Research Engineer" (C++ — skipped), "Equities Engineering | Product Frontend
 Engineer" (frontend — skipped).
 
+**2026-09-28 check**: Sampled all 6 pages via `fetch()`. Both established fits
+("Quantitative Developer – Data Strategies Group", "Sector Data Scientist,
+Central Team") already in `seen_jobs.json`. Everything else is intern/PhD/
+trader/quant-researcher roles or established exclusions (plain "Software
+Engineer" 6+ years, SRE no-fit, GQS ML Engineer PyTorch/C++/CUDA, Equities
+Frontend Engineer). Zero new matches.
+
 ## Two Sigma
 `careers.twosigma.com/careers/OpenRoles` shows 30 roles, 10 per page,
 sorted alphabetically by title (NOT by recency), no posted dates. Paging
@@ -770,3 +884,13 @@ skipped), "GPU Performance Engineer", "Modeling Workflow Specialist" (GPU
 acceleration), "Infrastructure Engineer - Linux", "Production Engineer"
 (trading-systems SRE), "Head of High-Frequency Market Data Engineering" —
 all skipped on skill/seniority mismatch.
+
+**2026-09-28 check**: 30 roles across 3 pages. "AI Solutions Developer"
+already in seen_jobs.json. New titles this run -- "AI Fluency: Program
+Manager" (PM, skip), "AI Research Scientist" (Campus/Intern, PhD-flavored,
+skip), "Post-Training Research Scientist" (research, skip), "Production
+Engineer, Electronic Trading Systems"/"Production Engineer, Two Sigma
+Securities" (established trading-systems SRE exclusion), "Infrastructure
+Engineer" (Tokyo -- location mismatch) -- all excluded. Rest of the list is
+quant-researcher/quant-software-architect roles matching established
+exclusion patterns. Zero new matches.
