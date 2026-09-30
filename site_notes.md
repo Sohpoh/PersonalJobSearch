@@ -72,6 +72,8 @@ sentences. The board list is `a[href*="/jobs/"]` links (title | location in
 `innerText`), all in the DOM at once. A "New" badge shows next to fresh
 titles.
 
+**2026-09-29 check**: ~50 listings. New engineering-flavored titles with a "New" badge: "Applied AI Engineer, Beneficial Deployments (Life Sciences)" (SF/NYC, 4+ yrs), "Applied AI Engineer, DNB" (London, 4+), both matched as stretches; "Applied AI Engineer, Enterprise" London (6+) and Sydney (8+) excluded. Same `fetch()`+regex method for years works (the body is JSON-escaped HTML, so match on the first 1-2 hits).
+
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
 any URL) auto-opens a specific job's detail pane rather than a plain list —
@@ -194,6 +196,8 @@ appeared (Durham NC, Austin TX) — same hardware/ASIC mismatch as prior New
 College Grad hardware roles, excluded on skill overlap. No "AI Safety and
 Security Engineering" or plain "Applied AI Engineer" postings surfaced in
 this run's sample. Zero matches again.
+
+**2026-09-29 check**: Sampled 4 pages (1097 roles). Plain `browser_evaluate` on `document.body.innerText` worked this time (list appears after a few seconds), and the 'Next jobs' JS click still pages. Opened "Software Engineer, DGX Cloud AI Infrastructure" (3+ yrs but GPU cluster/CUDA/C++ — excluded) and "Developer Advocate – Agentic AI" (5+ yrs + RL post-training — excluded). Zero matches.
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
@@ -349,6 +353,8 @@ Remote UK, one in London). "Software Engineer, Systems ML" and multiple
 (GPU/compiler specialization; leadership=senior). Two "SW Specialist -
 Wearables Interfaces Engineering" postings (10+ years / expert-level) —
 new title family, hardware/platform-integration specialization, excluded.
+
+**2026-09-29 update**: Sampled 2 pages. Page 1 all senior/leadership/research/iOS or already-logged; "Software Engineer, Machine Learning" (Sunnyvale) opened and has the 8+ yr boilerplate. Zero matches.
 
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
@@ -553,6 +559,8 @@ QA for streaming devices, no AI tie despite surfacing under the AI keyword
 search. "Seller Assistant"/"Delivery Consultant - AI/ML"/"AWS Artifact"/"Kiro"/
 "AWS Quick" postings from prior runs recurred under the same job IDs —
 already logged.
+
+**2026-09-29 update**: `search.json` (same params as 09-23, `result_limit=60`) filtered against IDs in `seen_jobs.json`; use `description` (not just `description_short`) to check for an AI/agent connection. Nine new AI/agent-flavored SDE reqs matched, mostly AWS Applied AI Solutions, Customer Service AI, and Ads gen-AI teams.
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
@@ -797,6 +805,8 @@ all consistent with established exclusion families, skipped without
 individual re-opening. "Backend/Full Stack Software Engineer, Codex for
 Finance" reconfirmed under the established 5+ years Codex-for-Finance bar.
 
+**2026-09-29 update**: 107 listings. Diff slugs against `seen_jobs.json` AND this section's exclusion lists. New matches: "Backend Software Engineer (Evals)" and "Software Engineer, Backend (Cooperative AI)" (both 4+ yrs, Python/FastAPI), "Software Engineer, Cloud Agents" (Codex, no years, agent infra). "Implicit Signals" is a model-serving platform role — excluded.
+
 ## Cursor
 `cursor.com/careers` is a single static list of ~120 roles (all in the DOM,
 no pagination or filters needed), each linking to `cursor.com/careers/<slug>`.
@@ -837,6 +847,8 @@ Pretraining, RL Data, RL Environments) skipped by title per established
 pattern. GTM/Field Engineer/Forward Deployed/Account Executive/Solutions
 Architect/Regional Director families remain sales/customer-facing, skipped.
 
+**2026-09-29 update**: 132 listings. Only new candidate opened: "Software Engineer, Bugbot" (no years, agents+evals) — matched. "Data Analyst, User Operations" needs 5+ yrs SQL analytics — excluded. Others are the established exclusions.
+
 ## Citadel
 `citadel.com/careers/open-opportunities/` lists ~60 roles, 10 per page over
 6 pages, newest-first by default; no posted dates shown. "Software Engineer –
@@ -863,6 +875,8 @@ Central Team") already in `seen_jobs.json`. Everything else is intern/PhD/
 trader/quant-researcher roles or established exclusions (plain "Software
 Engineer" 6+ years, SRE no-fit, GQS ML Engineer PyTorch/C++/CUDA, Equities
 Frontend Engineer). Zero new matches.
+
+**2026-09-29 check**: Same 6 pages via `fetch()`; nothing new. Zero matches.
 
 ## Two Sigma
 `careers.twosigma.com/careers/OpenRoles` shows 30 roles, 10 per page,
@@ -894,3 +908,5 @@ Securities" (established trading-systems SRE exclusion), "Infrastructure
 Engineer" (Tokyo -- location mismatch) -- all excluded. Rest of the list is
 quant-researcher/quant-software-architect roles matching established
 exclusion patterns. Zero new matches.
+
+**2026-09-29 check**: Now-new titles: "Quantitative Software Engineer: Generative AI" (min 1 yr, NLP/LLM — matched) and "Data Scientist - Campus Full-Time" (all levels, matched as a long shot). Fetching `/careers/JobDetail/<slug>/<id>` and reading from "should possess" still works.

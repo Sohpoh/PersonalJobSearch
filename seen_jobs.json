@@ -693,5 +693,95 @@
     "title": "Security GRC Engineer",
     "company": "Cursor",
     "first_seen": "2026-09-28"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5437172008": {
+    "title": "Applied AI Engineer, Beneficial Deployments (Life Sciences)",
+    "company": "Anthropic",
+    "first_seen": "2026-09-29"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5435282008": {
+    "title": "Applied AI Engineer, DNB",
+    "company": "Anthropic",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10562856": {
+    "title": "Software Development Engineer, Personalization, Amazon Personalization",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10564327": {
+    "title": "Software Development Engineer II, Amazon WorkSpaces Applications (AWS Applied AI Solutions)",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10563054": {
+    "title": "Software Dev Engineer II, AWS Healthcare AI",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10561581": {
+    "title": "Software Development Engineer (AWS Transform for Windows)",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10559347": {
+    "title": "Software Development Engineer, Amazon Customer Service (Human-in-the-Loop AI)",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10559392": {
+    "title": "Software Development Engineer, Customer Service Technologies (Network Solutions, AI-native)",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10559699": {
+    "title": "Software Development Engineer, General Shopping Intelligence",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10563738": {
+    "title": "Software Development Engineer, Advertising Services",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10559549": {
+    "title": "Software Development Engineer, Sponsored Products and Brands",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
+  },
+  "https://openai.com/careers/backend-software-engineer-(evals)-san-francisco/": {
+    "title": "Backend Software Engineer (Evals)",
+    "company": "OpenAI",
+    "first_seen": "2026-09-29"
+  },
+  "https://openai.com/careers/software-engineer-backend-(cooperative-ai)-san-francisco/": {
+    "title": "Software Engineer, Backend (Cooperative AI)",
+    "company": "OpenAI",
+    "first_seen": "2026-09-29"
+  },
+  "https://openai.com/careers/software-engineer-cloud-agents-san-francisco/": {
+    "title": "Software Engineer, Cloud Agents",
+    "company": "OpenAI",
+    "first_seen": "2026-09-29"
+  },
+  "https://cursor.com/careers/software-engineer-bugbot": {
+    "title": "Software Engineer, Bugbot",
+    "company": "Cursor",
+    "first_seen": "2026-09-29"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-City-United-States-Quantitative-Software-Engineer-Generative-AI/13079": {
+    "title": "Quantitative Software Engineer: Generative AI",
+    "company": "Two Sigma",
+    "first_seen": "2026-09-29"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Data-Scientist-Campus-Full-Time/14272": {
+    "title": "Data Scientist - Campus Full-Time",
+    "company": "Two Sigma",
+    "first_seen": "2026-09-29"
+  },
+  "https://amazon.jobs/en/jobs/10559396": {
+    "title": "Software Development Engineer, Customer Service Technologies",
+    "company": "Amazon",
+    "first_seen": "2026-09-29"
   }
 }
