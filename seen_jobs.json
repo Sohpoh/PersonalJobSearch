@@ -783,5 +783,55 @@
     "title": "Software Development Engineer, Customer Service Technologies",
     "company": "Amazon",
     "first_seen": "2026-09-29"
+  },
+  "https://www.amazon.jobs/jobs/10566212": {
+    "title": "Software Development Engineer, Agentic AI",
+    "company": "Amazon",
+    "first_seen": "2026-10-01"
+  },
+  "https://www.amazon.jobs/jobs/10566213": {
+    "title": "Software Development Engineer, Agentic AI (duplicate req)",
+    "company": "Amazon",
+    "first_seen": "2026-10-01"
+  },
+  "https://www.amazon.jobs/jobs/10565536": {
+    "title": "Software Development Engineer - AgentCore, AWS Agentic AI",
+    "company": "Amazon",
+    "first_seen": "2026-10-01"
+  },
+  "https://www.amazon.jobs/jobs/10565705": {
+    "title": "Software Development Engineer, Amazon Quick",
+    "company": "Amazon",
+    "first_seen": "2026-10-01"
+  },
+  "https://www.amazon.jobs/jobs/10565701": {
+    "title": "Software Development Engineer, Amazon Quick (second req)",
+    "company": "Amazon",
+    "first_seen": "2026-10-01"
+  },
+  "https://www.amazon.jobs/jobs/10565690": {
+    "title": "Machine Learning Engineer, Sequence Models (project Sequoia)",
+    "company": "Amazon",
+    "first_seen": "2026-10-01"
+  },
+  "https://openai.com/careers/product-engineer-full-stack-agents-san-francisco/": {
+    "title": "Product Engineer, Full Stack - Agents",
+    "company": "OpenAI",
+    "first_seen": "2026-10-01"
+  },
+  "https://openai.com/careers/software-engineer-privacy-and-compliance-san-francisco/": {
+    "title": "Software Engineer - Privacy & Compliance",
+    "company": "OpenAI",
+    "first_seen": "2026-10-01"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Software-Engineering-Full-Time-Campus-Hire-NYC/14014": {
+    "title": "Software Engineering Full-Time Campus Hire (NYC)",
+    "company": "Two Sigma",
+    "first_seen": "2026-10-01"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Software-Engineer-Technology-Security-Risk/13522": {
+    "title": "Software Engineer, Technology Security & Risk",
+    "company": "Two Sigma",
+    "first_seen": "2026-10-01"
   }
 }

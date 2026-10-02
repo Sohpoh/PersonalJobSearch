@@ -74,6 +74,8 @@ titles.
 
 **2026-09-29 check**: ~50 listings. New engineering-flavored titles with a "New" badge: "Applied AI Engineer, Beneficial Deployments (Life Sciences)" (SF/NYC, 4+ yrs), "Applied AI Engineer, DNB" (London, 4+), both matched as stretches; "Applied AI Engineer, Enterprise" London (6+) and Sydney (8+) excluded. Same `fetch()`+regex method for years works (the body is JSON-escaped HTML, so match on the first 1-2 hits).
 
+**2026-10-01 check**: ~50 listings; same method (`a[href*="/jobs/"]` list, diff IDs against `seen_jobs.json`). No unseen IDs beyond already-excluded "Applied AI Engineer, Enterprise" (London, 6+). Zero matches.
+
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
 any URL) auto-opens a specific job's detail pane rather than a plain list —
@@ -198,6 +200,8 @@ Security Engineering" or plain "Applied AI Engineer" postings surfaced in
 this run's sample. Zero matches again.
 
 **2026-09-29 check**: Sampled 4 pages (1097 roles). Plain `browser_evaluate` on `document.body.innerText` worked this time (list appears after a few seconds), and the 'Next jobs' JS click still pages. Opened "Software Engineer, DGX Cloud AI Infrastructure" (3+ yrs but GPU cluster/CUDA/C++ — excluded) and "Developer Advocate – Agentic AI" (5+ yrs + RL post-training — excluded). Zero matches.
+
+**2026-10-01 check**: Sampled 4 pages (1113 roles). `document.body.innerText` after a 4s wait plus JS "Next jobs" click, looped in one `browser_evaluate`, works. Only non-senior US candidate "System Software Engineer - Robotics Simulation" (2+ yrs) needs C/C++ + robotics sim — excluded. Zero matches.
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
@@ -355,6 +359,8 @@ Wearables Interfaces Engineering" postings (10+ years / expert-level) —
 new title family, hardware/platform-integration specialization, excluded.
 
 **2026-09-29 update**: Sampled 2 pages. Page 1 all senior/leadership/research/iOS or already-logged; "Software Engineer, Machine Learning" (Sunnyvale) opened and has the 8+ yr boilerplate. Zero matches.
+
+**2026-10-01 update**: Sampled 2 pages. "Software Developer, GO Systems" needs 8+ yrs (excluded); London "Software Engineer, Infrastructure" falls in the established senior pattern. Zero matches.
 
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
@@ -561,6 +567,8 @@ search. "Seller Assistant"/"Delivery Consultant - AI/ML"/"AWS Artifact"/"Kiro"/
 already logged.
 
 **2026-09-29 update**: `search.json` (same params as 09-23, `result_limit=60`) filtered against IDs in `seen_jobs.json`; use `description` (not just `description_short`) to check for an AI/agent connection. Nine new AI/agent-flavored SDE reqs matched, mostly AWS Applied AI Solutions, Customer Service AI, and Ads gen-AI teams.
+
+**2026-10-01 update**: `search.json` (same params, `result_limit=60`) again; filter IDs against `seen_jobs.json` then read `description_short` + `basic_qualifications` for AI/agent tie. Agentic AI (Jersey City), AgentCore (NYC), Amazon Quick (Seattle x2) and "ML Engineer, Sequence Models" matched. Audible "FinTech/Customer Service Tech", Ring DevX (Cambridge UK), OpenSearch, EKS, Cloudscape skipped (no AI/agent tie or frontend).
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
@@ -807,6 +815,8 @@ Finance" reconfirmed under the established 5+ years Codex-for-Finance bar.
 
 **2026-09-29 update**: 107 listings. Diff slugs against `seen_jobs.json` AND this section's exclusion lists. New matches: "Backend Software Engineer (Evals)" and "Software Engineer, Backend (Cooperative AI)" (both 4+ yrs, Python/FastAPI), "Software Engineer, Cloud Agents" (Codex, no years, agent infra). "Implicit Signals" is a model-serving platform role — excluded.
 
+**2026-10-01 update**: ~100 listings. New: "Product Engineer, Full Stack - Agents" and "Software Engineer - Privacy & Compliance" matched as stretches. "Product Engineer, Cyber" is Go backend — excluded; Integrity Foundations/Scaled Abuse (fraud), Habitat (databases), Model Deployment (GPU fleet infra) excluded.
+
 ## Cursor
 `cursor.com/careers` is a single static list of ~120 roles (all in the DOM,
 no pagination or filters needed), each linking to `cursor.com/careers/<slug>`.
@@ -849,6 +859,8 @@ Architect/Regional Director families remain sales/customer-facing, skipped.
 
 **2026-09-29 update**: 132 listings. Only new candidate opened: "Software Engineer, Bugbot" (no years, agents+evals) — matched. "Data Analyst, User Operations" needs 5+ yrs SQL analytics — excluded. Others are the established exclusions.
 
+**2026-10-01 update**: ~130 listings; no new matches. Opened Developer Productivity (build/CI), Growth (product taste), GTM Applications Engineer, Product Education Engineer (5+ yrs), Full Stack ML Research Tools (React/dense frontend) — all excluded.
+
 ## Citadel
 `citadel.com/careers/open-opportunities/` lists ~60 roles, 10 per page over
 6 pages, newest-first by default; no posted dates shown. "Software Engineer –
@@ -877,6 +889,8 @@ Engineer" 6+ years, SRE no-fit, GQS ML Engineer PyTorch/C++/CUDA, Equities
 Frontend Engineer). Zero new matches.
 
 **2026-09-29 check**: Same 6 pages via `fetch()`; nothing new. Zero matches.
+
+**2026-10-01 check**: all 6 pages via `fetch()`; nothing new. Zero matches.
 
 ## Two Sigma
 `careers.twosigma.com/careers/OpenRoles` shows 30 roles, 10 per page,
@@ -910,3 +924,5 @@ quant-researcher/quant-software-architect roles matching established
 exclusion patterns. Zero new matches.
 
 **2026-09-29 check**: Now-new titles: "Quantitative Software Engineer: Generative AI" (min 1 yr, NLP/LLM — matched) and "Data Scientist - Campus Full-Time" (all levels, matched as a long shot). Fetching `/careers/JobDetail/<slug>/<id>` and reading from "should possess" still works.
+
+**2026-10-01 check**: The list is actually ~54 roles (offsets 0-50, five-plus pages) — earlier notes of 30 were too low; fetch `jobOffset=0..50`. Campus Hire "Software Engineering Full-Time Campus Hire (NYC)" (14014, also Houston 14018) and "Software Engineer, Technology Security & Risk" (13522) matched. Excluded: Technology Risk (7+), Portfolio Research Acceleration (7+), Techniques Engineering (GPU ML systems), Enterprise Platform Engineering (Linux/network depth).
