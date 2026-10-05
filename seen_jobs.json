@@ -833,5 +833,30 @@
     "title": "Software Engineer, Technology Security & Risk",
     "company": "Two Sigma",
     "first_seen": "2026-10-01"
+  },
+  "https://www.amazon.jobs/jobs/10568156": {
+    "title": "Software Development Engineer, AWS Agentic AI",
+    "company": "Amazon",
+    "first_seen": "2026-10-04"
+  },
+  "https://www.amazon.jobs/jobs/10567987": {
+    "title": "Software Development Engineer, Conversational Ads Experience",
+    "company": "Amazon",
+    "first_seen": "2026-10-04"
+  },
+  "https://openai.com/careers/software-engineer-openai-presence-san-francisco/": {
+    "title": "Software Engineer, OpenAI Presence",
+    "company": "OpenAI",
+    "first_seen": "2026-10-04"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Software-Engineer-Modeling-Engineering/13515": {
+    "title": "Software Engineer, Modeling Engineering",
+    "company": "Two Sigma",
+    "first_seen": "2026-10-04"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Two-Sigma-Securities-Software-Engineer/13992": {
+    "title": "Two Sigma Securities, Software Engineer",
+    "company": "Two Sigma",
+    "first_seen": "2026-10-04"
   }
 }
