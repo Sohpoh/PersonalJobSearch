@@ -858,5 +858,25 @@
     "title": "Two Sigma Securities, Software Engineer",
     "company": "Two Sigma",
     "first_seen": "2026-10-04"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5445410008": {
+    "title": "Applied AI Engineer, Public Sector",
+    "company": "Anthropic",
+    "first_seen": "2026-10-07"
+  },
+  "https://jobs.nvidia.com/careers/job/893397617990": {
+    "title": "Machine Learning Engineer (JR2025036)",
+    "company": "NVIDIA",
+    "first_seen": "2026-10-07"
+  },
+  "https://www.amazon.jobs/jobs/10569781": {
+    "title": "Software Development Engineer (ads personalization ML)",
+    "company": "Amazon",
+    "first_seen": "2026-10-07"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-City-United-States-Quantitative-Software-Engineer-Quantitative-Components/13083": {
+    "title": "Quantitative Software Engineer: Quantitative Components",
+    "company": "Two Sigma",
+    "first_seen": "2026-10-07"
   }
 }

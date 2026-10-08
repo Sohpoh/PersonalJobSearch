@@ -78,6 +78,8 @@ titles.
 
 **2026-10-04 check**: ~50 listings; only unseen IDs were already-excluded titles (Enterprise London 6+, Life Sciences London, Sydney/Tokyo location). Zero matches.
 
+**2026-10-07 check**: ~50 listings; diffing IDs against `seen_jobs.json` found only "Applied AI Engineer, Public Sector" (4+ yrs, matched as stretch) plus Architect/Manager titles (excluded).
+
 ## NVIDIA
 `jobs.nvidia.com/careers` is a Phenom-based SPA. Landing on the bare URL (or
 any URL) auto-opens a specific job's detail pane rather than a plain list —
@@ -206,6 +208,8 @@ this run's sample. Zero matches again.
 **2026-10-01 check**: Sampled 4 pages (1113 roles). `document.body.innerText` after a 4s wait plus JS "Next jobs" click, looped in one `browser_evaluate`, works. Only non-senior US candidate "System Software Engineer - Robotics Simulation" (2+ yrs) needs C/C++ + robotics sim — excluded. Zero matches.
 
 **2026-10-04 check**: Sampled 4 pages (1149 roles) with the looped `browser_evaluate` + 'Next jobs' click; all senior/principal/hardware/GTM. Zero matches.
+
+**2026-10-07 check**: Sampled 4 pages (1174 roles). Matched "Machine Learning Engineer" JR2025036 (3+ yrs, LangChain/agents/evals) as a stretch; opened via `?query=JR2025036` and read the pane after a 4s wait.
 
 ## Meta
 `metacareers.com/jobsearch/` supports real query-param filtering
@@ -367,6 +371,8 @@ new title family, hardware/platform-integration specialization, excluded.
 **2026-10-01 update**: Sampled 2 pages. "Software Developer, GO Systems" needs 8+ yrs (excluded); London "Software Engineer, Infrastructure" falls in the established senior pattern. Zero matches.
 
 **2026-10-04 update**: Sampled 2 pages. Multimedia & Multimodal AI SWE and SWE Machine Learning all state 8+ yrs; the rest are leadership/senior. Zero matches.
+
+**2026-10-07 update**: Sampled 2 pages; all senior/8+/leadership or established exclusions (FDE Enterprise AI is Brazil-only). Zero matches.
 
 ## Amazon
 The tracked URL (`amazon.jobs/content/en/artificial-intelligence-ai?country[]=...`)
@@ -577,6 +583,8 @@ already logged.
 **2026-10-01 update**: `search.json` (same params, `result_limit=60`) again; filter IDs against `seen_jobs.json` then read `description_short` + `basic_qualifications` for AI/agent tie. Agentic AI (Jersey City), AgentCore (NYC), Amazon Quick (Seattle x2) and "ML Engineer, Sequence Models" matched. Audible "FinTech/Customer Service Tech", Ring DevX (Cambridge UK), OpenSearch, EKS, Cloudscape skipped (no AI/agent tie or frontend).
 
 **2026-10-04 update**: `search.json` (same params, `result_limit=60`). Matched AWS Agentic AI (10568156) and Conversational Ads Experience (10567987, LLM-powered). Amazon Connect SDE2, Catalog services, Annapurna networking, Compiler Engineer skipped (no AI/agent tie or silicon/C++ depth).
+
+**2026-10-07 update**: `search.json` (same params, `result_limit=60`). Matched plain "Software Development Engineer" 10569781 (ads personalization ML, 3+ yrs). Excluded: Applied Scientist reqs (PhD or Master's+4-6), Sr./Audible AI Voice (4+ leading design), Neuron inference (accelerator C++).
 
 ## OpenAI
 `openai.com/careers/search/?c=<team-uuid>,<team-uuid>,...` renders every
@@ -827,6 +835,8 @@ Finance" reconfirmed under the established 5+ years Codex-for-Finance bar.
 
 **2026-10-04 update**: 108 listings; diff slugs against `seen_jobs.json` and this section's exclusions. New: "Software Engineer, OpenAI Presence" (agent platform, stretch). Excluded: Consumer Health (mobile/frontend), Enterprise Expansions (frontend-heavy), Sales Platform (5+), Ads Manager (UI platform).
 
+**2026-10-07 update**: ~100 listings; every non-excluded slug was already reviewed. Zero matches. "Monetization Data Systems" is a Senior role — excluded.
+
 ## Cursor
 `cursor.com/careers` is a single static list of ~120 roles (all in the DOM,
 no pagination or filters needed), each linking to `cursor.com/careers/<slug>`.
@@ -873,6 +883,8 @@ Architect/Regional Director families remain sales/customer-facing, skipped.
 
 **2026-10-04 update**: 132 listings; every engineering fit was already in `seen_jobs.json`. Zero new matches.
 
+**2026-10-07 update**: 133 listings; nothing new beyond established families. Zero matches.
+
 ## Citadel
 `citadel.com/careers/open-opportunities/` lists ~60 roles, 10 per page over
 6 pages, newest-first by default; no posted dates shown. "Software Engineer –
@@ -905,6 +917,8 @@ Frontend Engineer). Zero new matches.
 **2026-10-01 check**: all 6 pages via `fetch()`; nothing new. Zero matches.
 
 **2026-10-04 check**: all pages via `fetch()`; nothing new. Zero matches.
+
+**2026-10-07 check**: 60 roles via `fetch()`; the two earlier fits (Quantitative Developer – Data Strategies, Sector Data Scientist) are no longer listed. Zero matches.
 
 ## Two Sigma
 `careers.twosigma.com/careers/OpenRoles` shows 30 roles, 10 per page,
@@ -942,4 +956,6 @@ exclusion patterns. Zero new matches.
 **2026-10-01 check**: The list is actually ~54 roles (offsets 0-50, five-plus pages) — earlier notes of 30 were too low; fetch `jobOffset=0..50`. Campus Hire "Software Engineering Full-Time Campus Hire (NYC)" (14014, also Houston 14018) and "Software Engineer, Technology Security & Risk" (13522) matched. Excluded: Technology Risk (7+), Portfolio Research Acceleration (7+), Techniques Engineering (GPU ML systems), Enterprise Platform Engineering (Linux/network depth).
 
 **2026-10-04 check**: ~60 roles (fetch `jobOffset=0..60`). New matched as stretches: "Software Engineer, Modeling Engineering" (13515) and "Two Sigma Securities, Software Engineer" (13992). Excluded: "Trading Engineering" (C/C++/Rust required), "Reliability Engineer, Data" (Tokyo).
+
+**2026-10-07 check**: ~59 roles (`jobOffset=0..70`). Matched "Quantitative Software Engineer: Quantitative Components" (13083, min 1 yr) as a long shot.
 
