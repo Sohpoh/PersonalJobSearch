@@ -878,5 +878,40 @@
     "title": "Quantitative Software Engineer: Quantitative Components",
     "company": "Two Sigma",
     "first_seen": "2026-10-07"
+  },
+  "https://www.amazon.jobs/jobs/10573921": {
+    "title": "Software Development Engineer, Agentic AI, Velocity Labs",
+    "company": "Amazon",
+    "first_seen": "2026-10-11"
+  },
+  "https://www.amazon.jobs/jobs/10573518": {
+    "title": "Software Development Engineer, Developer Experience",
+    "company": "Amazon",
+    "first_seen": "2026-10-11"
+  },
+  "https://www.amazon.jobs/jobs/10573523": {
+    "title": "Software Development Engineer, Developer Experience (duplicate)",
+    "company": "Amazon",
+    "first_seen": "2026-10-11"
+  },
+  "https://www.amazon.jobs/jobs/10574795": {
+    "title": "Software Development Engineer, AWS Transform Migrations",
+    "company": "Amazon",
+    "first_seen": "2026-10-11"
+  },
+  "https://www.amazon.jobs/jobs/10573899": {
+    "title": "Software Development Engineer II, AWS WorkSpaces Control Plane Backend",
+    "company": "Amazon",
+    "first_seen": "2026-10-11"
+  },
+  "https://www.amazon.jobs/jobs/10575303": {
+    "title": "Software Development Engineer",
+    "company": "Amazon",
+    "first_seen": "2026-10-11"
+  },
+  "https://cursor.com/careers/software-engineer-grok-connectors": {
+    "title": "Software Engineer, Grok Connectors",
+    "company": "Cursor",
+    "first_seen": "2026-10-11"
   }
 }
