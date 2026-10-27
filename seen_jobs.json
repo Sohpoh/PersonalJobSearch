@@ -913,5 +913,90 @@
     "title": "Software Engineer, Grok Connectors",
     "company": "Cursor",
     "first_seen": "2026-10-11"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5455961008": {
+    "title": "Applied AI Demo Engineer",
+    "company": "Anthropic",
+    "first_seen": "2026-10-26"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5454650008": {
+    "title": "Applied AI Engineer, Startups (Life Sciences)",
+    "company": "Anthropic",
+    "first_seen": "2026-10-26"
+  },
+  "https://job-boards.greenhouse.io/anthropic/jobs/5454673008": {
+    "title": "Applied AI Engineer, Startups (Physical AI)",
+    "company": "Anthropic",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10587403": {
+    "title": "Software Development Engineer, Agentic AI, Velocity Labs",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10585694": {
+    "title": "Software Development Engineer, Amazon Quick",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10587677": {
+    "title": "Software Development Engineer, Tax Central AI Engineering",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10589259": {
+    "title": "Software Development Engineer, AWS Field Experience",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10589250": {
+    "title": "Software Dev Engineer II, SIFT",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10585967": {
+    "title": "Forward Deployed Engineer (Model Customization and Optimization), AWS FDE",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10583533": {
+    "title": "Forward Deployed Engineer, Forward Deployment Engineering",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10583256": {
+    "title": "Delivery Consultant - AI/ML, ProServe AWSI Delivery - AutoMfg",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://openai.com/careers/software-engineer-backend-dots-new-york-city/": {
+    "title": "Software Engineer, Backend \u2014 Dots",
+    "company": "OpenAI",
+    "first_seen": "2026-10-26"
+  },
+  "https://openai.com/careers/backend-software-engineer-cooperative-ai-(evals)-san-francisco/": {
+    "title": "Backend Software Engineer, Cooperative AI (Evals)",
+    "company": "OpenAI",
+    "first_seen": "2026-10-26"
+  },
+  "https://cursor.com/careers/software-engineer-model-lifecycle-and-signals": {
+    "title": "Software Engineer, Model Lifecycle and Signals",
+    "company": "Cursor",
+    "first_seen": "2026-10-26"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/London-United-Kingdom-of-Great-Britain-and-Northern-Ireland-Software-Engineering-Full-Time-Campus-Hire-London/14020": {
+    "title": "Software Engineering Full-Time Campus Hire (London)",
+    "company": "Two Sigma",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10585475": {
+    "title": "Software Development Engineer, Amazon Quick (dup)",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/jobs/10585474": {
+    "title": "Software Development Engineer, Amazon Quick (dup)",
+    "company": "Amazon",
+    "first_seen": "2026-10-26"
   }
 }

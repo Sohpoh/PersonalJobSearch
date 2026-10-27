@@ -974,3 +974,12 @@ exclusion patterns. Zero new matches.
 **2026-10-07 check**: ~59 roles (`jobOffset=0..70`). Matched "Quantitative Software Engineer: Quantitative Components" (13083, min 1 yr) as a long shot.
 
 **2026-10-11 check**: ~60 roles (`jobOffset=0..80`); earlier AI/quant fits are no longer listed. Zero matches.
+
+**2026-10-26 check (all sites)**: Playwright `browser_evaluate` `filename` must be inside the project dir (use `.playwright-mcp/`); saving big results there and diffing with Python against `seen_jobs.json` works well.
+- Anthropic: ~50 listings; new matches were "Applied AI Demo Engineer" (no years, Claude Code/MCP) and Startups (Life Sciences / Physical AI) at 4+ yrs; seen_jobs only holds 20 Anthropic IDs so most unseen are the excluded Architect/Manager family.
+- NVIDIA: 4 pages; zero matches ("Data Application Engineer, EDM" is 8+ yrs).
+- Meta: 2 pages; zero ("Security Engineer" London 6+).
+- Amazon: `search.json` (result_limit=100) ok; new AI/agent SDE and FDE II reqs matched.
+- OpenAI: 120 links; new "Dots" NYC team (Backend = no years; Full Stack/Mobile Web want Senior/Staff). Agent Runtime, Child Safety, Intel & Investigations all 7+; Physical Engineering is "Founding"; Monetization Delivery 10+.
+- Cursor: 125 listings; "Model Lifecycle and Signals" matched.
+- Citadel: 63 roles; fits already in seen_jobs.json. Two Sigma: only new is London Campus Hire (14020).
