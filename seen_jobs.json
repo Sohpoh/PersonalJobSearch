@@ -998,5 +998,100 @@
     "title": "Software Development Engineer, Amazon Quick (dup)",
     "company": "Amazon",
     "first_seen": "2026-10-26"
+  },
+  "https://www.amazon.jobs/en/jobs/10595891": {
+    "title": "Software Engineer, Worldwide Amazon Stores Finance Technology, Controllership Engineering",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10596540": {
+    "title": "Software Development Engineer, AWS Transform",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10596539": {
+    "title": "Software Development Engineer, AWS Transform (duplicate req)",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10598801": {
+    "title": "Forward Deployed Engineer, AWS Forward Deployed Engineering",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10597234": {
+    "title": "Software Development Engineer, AWS Builder Acceleration",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10594897": {
+    "title": "Software Development Engineer, Amazon Customer Service",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10590246": {
+    "title": "Software Development Engineer, Amazon Customer Service",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10593929": {
+    "title": "Software Development Engineer (sponsored conversational shopping)",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10595528": {
+    "title": "Machine Learning Engineer, FAI",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10596654": {
+    "title": "Software Development Engineer, AWS Experience Analytics",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10595562": {
+    "title": "Machine Learning Engineer (ads ML serving)",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.amazon.jobs/en/jobs/10590147": {
+    "title": "Software Development Engineer - 2027 (early career)",
+    "company": "Amazon",
+    "first_seen": "2026-11-09"
+  },
+  "https://openai.com/careers/software-engineer-guardian-london-uk/": {
+    "title": "Software Engineer, Guardian",
+    "company": "OpenAI",
+    "first_seen": "2026-11-09"
+  },
+  "https://openai.com/careers/product-evals-engineer-chatgpt-learning-san-francisco/": {
+    "title": "Product Evals Engineer, ChatGPT Learning",
+    "company": "OpenAI",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.citadel.com/careers/details/python-software-engineer/": {
+    "title": "Python Software Engineer",
+    "company": "Citadel",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.citadel.com/careers/details/python-quantitative-developer/": {
+    "title": "Python Quantitative Developer",
+    "company": "Citadel",
+    "first_seen": "2026-11-09"
+  },
+  "https://www.citadel.com/careers/details/java-software-engineer/": {
+    "title": "Java Software Engineer",
+    "company": "Citadel",
+    "first_seen": "2026-11-09"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/New-York-New-York-United-States-Software-Engineer/14404": {
+    "title": "Software Engineer",
+    "company": "Two Sigma",
+    "first_seen": "2026-11-09"
+  },
+  "https://careers.twosigma.com/careers/JobDetail/Houston-Texas-United-States-Software-Engineering-Full-Time-Campus-Hire-Houston/14018": {
+    "title": "Software Engineering Full-Time Campus Hire (Houston)",
+    "company": "Two Sigma",
+    "first_seen": "2026-11-09"
   }
 }

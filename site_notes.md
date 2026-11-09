@@ -983,3 +983,11 @@ exclusion patterns. Zero new matches.
 - OpenAI: 120 links; new "Dots" NYC team (Backend = no years; Full Stack/Mobile Web want Senior/Staff). Agent Runtime, Child Safety, Intel & Investigations all 7+; Physical Engineering is "Founding"; Monetization Delivery 10+.
 - Cursor: 125 listings; "Model Lifecycle and Signals" matched.
 - Citadel: 63 roles; fits already in seen_jobs.json. Two Sigma: only new is London Campus Hire (14020).
+**2026-11-09 check (all sites)**: `browser_evaluate` with `filename` writes JSON-encoded strings — `json.loads` the file (twice if needed) before diffing; `seen_jobs.json` has OpenAI/Cursor/Citadel keys with no digits, so build the ID set with `[m[-1] for m in re.findall(...) if m]`.
+- Anthropic: 50 listings; only unseen non-Architect IDs were Munich/Paris/London-life-sciences/Research Engineer (established exclusions). Zero.
+- NVIDIA: 4 pages (1332 roles); only non-senior US title "ML Engineer, Data Curation - AV" needs MS+5 yrs. Zero.
+- Meta: 2 pages; ML SWE Central Integrity and ML Ads Products both 8+/PhD-4 boilerplate. Zero.
+- Amazon: `search.json` (result_limit=100) reaches back to Oct 27; matched AI/agent SDE reqs, FDE Boston. FDE US Gov reqs need TS/SCI clearance (skipped).
+- OpenAI: 116 links; new matches Guardian (London) and Product Evals ChatGPT Learning. Consumer Verticals 10+, Healthcare 5+ (excluded).
+- Cursor: 120 listings; nothing new beyond infra specialists (Compute Infra, Storage, Core Services, etc.). Zero.
+- Citadel: 67 roles; new evergreen-style Python SWE / Python Quant Dev / Java SWE (no years bar). Two Sigma: ~66 roles (`jobOffset` 0..90), new Software Engineer 14404 and Houston campus hire 14018.
